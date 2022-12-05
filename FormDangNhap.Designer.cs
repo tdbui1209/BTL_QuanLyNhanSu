@@ -56,7 +56,7 @@
             this.textBox_MatKhau.Location = new System.Drawing.Point(135, 68);
             this.textBox_MatKhau.Name = "textBox_MatKhau";
             this.textBox_MatKhau.Size = new System.Drawing.Size(153, 27);
-            this.textBox_MatKhau.TabIndex = 3;
+            this.textBox_MatKhau.TabIndex = 1;
             this.textBox_MatKhau.UseSystemPasswordChar = true;
             this.textBox_MatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_MatKhau_KeyDown);
             // 
@@ -74,7 +74,7 @@
             this.textBox_TenDangNhap.Location = new System.Drawing.Point(135, 35);
             this.textBox_TenDangNhap.Name = "textBox_TenDangNhap";
             this.textBox_TenDangNhap.Size = new System.Drawing.Size(153, 27);
-            this.textBox_TenDangNhap.TabIndex = 1;
+            this.textBox_TenDangNhap.TabIndex = 0;
             this.textBox_TenDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_TenDangNhap_KeyDown);
             // 
             // label1
@@ -91,7 +91,7 @@
             this.button_Thoat.Location = new System.Drawing.Point(218, 130);
             this.button_Thoat.Name = "button_Thoat";
             this.button_Thoat.Size = new System.Drawing.Size(104, 41);
-            this.button_Thoat.TabIndex = 1;
+            this.button_Thoat.TabIndex = 3;
             this.button_Thoat.Text = "Thoát";
             this.button_Thoat.UseVisualStyleBackColor = true;
             this.button_Thoat.Click += new System.EventHandler(this.button_Thoat_Click);
@@ -117,6 +117,7 @@
             this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

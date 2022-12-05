@@ -31,14 +31,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mni_HeThong = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_TaoTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mni_QuanLyTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_QuanLy = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýPhòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýNhânSựToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_NguoiDung = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_ThongTinCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
-            this.phânQuyềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýPhòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýNhânSựToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +58,7 @@
             // 
             this.mni_HeThong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mni_TaoTaiKhoan,
-            this.phânQuyềnToolStripMenuItem,
-            this.quảnLýTàiKhoảnToolStripMenuItem});
+            this.mni_QuanLyTaiKhoan});
             this.mni_HeThong.Name = "mni_HeThong";
             this.mni_HeThong.Size = new System.Drawing.Size(85, 24);
             this.mni_HeThong.Text = "Hệ thống";
@@ -70,6 +68,13 @@
             this.mni_TaoTaiKhoan.Name = "mni_TaoTaiKhoan";
             this.mni_TaoTaiKhoan.Size = new System.Drawing.Size(224, 26);
             this.mni_TaoTaiKhoan.Text = "Tạo tài khoản";
+            this.mni_TaoTaiKhoan.Click += new System.EventHandler(this.mni_TaoTaiKhoan_Click);
+            // 
+            // mni_QuanLyTaiKhoan
+            // 
+            this.mni_QuanLyTaiKhoan.Name = "mni_QuanLyTaiKhoan";
+            this.mni_QuanLyTaiKhoan.Size = new System.Drawing.Size(224, 26);
+            this.mni_QuanLyTaiKhoan.Text = "Quản lý tài khoản";
             // 
             // mni_QuanLy
             // 
@@ -79,6 +84,18 @@
             this.mni_QuanLy.Name = "mni_QuanLy";
             this.mni_QuanLy.Size = new System.Drawing.Size(73, 24);
             this.mni_QuanLy.Text = "Quản lý";
+            // 
+            // quảnLýPhòngBanToolStripMenuItem
+            // 
+            this.quảnLýPhòngBanToolStripMenuItem.Name = "quảnLýPhòngBanToolStripMenuItem";
+            this.quảnLýPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.quảnLýPhòngBanToolStripMenuItem.Text = "Quản lý phòng ban";
+            // 
+            // quảnLýNhânSựToolStripMenuItem
+            // 
+            this.quảnLýNhânSựToolStripMenuItem.Name = "quảnLýNhânSựToolStripMenuItem";
+            this.quảnLýNhânSựToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.quảnLýNhânSựToolStripMenuItem.Text = "Quản lý nhân sự";
             // 
             // mni_NguoiDung
             // 
@@ -92,38 +109,14 @@
             // mni_ThongTinCaNhan
             // 
             this.mni_ThongTinCaNhan.Name = "mni_ThongTinCaNhan";
-            this.mni_ThongTinCaNhan.Size = new System.Drawing.Size(224, 26);
+            this.mni_ThongTinCaNhan.Size = new System.Drawing.Size(210, 26);
             this.mni_ThongTinCaNhan.Text = "Thông tin cá nhân";
             // 
             // mni_DoiMatKhau
             // 
             this.mni_DoiMatKhau.Name = "mni_DoiMatKhau";
-            this.mni_DoiMatKhau.Size = new System.Drawing.Size(224, 26);
+            this.mni_DoiMatKhau.Size = new System.Drawing.Size(210, 26);
             this.mni_DoiMatKhau.Text = "Đổi mật khẩu";
-            // 
-            // phânQuyềnToolStripMenuItem
-            // 
-            this.phânQuyềnToolStripMenuItem.Name = "phânQuyềnToolStripMenuItem";
-            this.phânQuyềnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.phânQuyềnToolStripMenuItem.Text = "Phân quyền";
-            // 
-            // quảnLýTàiKhoảnToolStripMenuItem
-            // 
-            this.quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
-            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản lý tài khoản";
-            // 
-            // quảnLýPhòngBanToolStripMenuItem
-            // 
-            this.quảnLýPhòngBanToolStripMenuItem.Name = "quảnLýPhòngBanToolStripMenuItem";
-            this.quảnLýPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.quảnLýPhòngBanToolStripMenuItem.Text = "Quản lý phòng ban";
-            // 
-            // quảnLýNhânSựToolStripMenuItem
-            // 
-            this.quảnLýNhânSựToolStripMenuItem.Name = "quảnLýNhânSựToolStripMenuItem";
-            this.quảnLýNhânSựToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.quảnLýNhânSựToolStripMenuItem.Text = "Quản lý nhân sự";
             // 
             // FormMain
             // 
@@ -152,8 +145,7 @@
         private ToolStripMenuItem mni_ThongTinCaNhan;
         private ToolStripMenuItem mni_DoiMatKhau;
         private ToolStripMenuItem mni_TaoTaiKhoan;
-        private ToolStripMenuItem phânQuyềnToolStripMenuItem;
-        private ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;
+        private ToolStripMenuItem mni_QuanLyTaiKhoan;
         private ToolStripMenuItem quảnLýPhòngBanToolStripMenuItem;
         private ToolStripMenuItem quảnLýNhânSựToolStripMenuItem;
     }

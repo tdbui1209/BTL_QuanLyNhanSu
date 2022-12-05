@@ -49,3 +49,18 @@ AS
 	RETURN (SELECT TenChucNang FROM ChucNang 
 	INNER JOIN PhanQuyen ON PhanQuyen.MaChucNang=ChucNang.MaChucNang
 	WHERE TenDangNhap=@tenDangNhap)
+
+create procedure spThemNguoiDung @TenDangNhap varchar(30), @MatKhau varchar(10), @TrangThai bit
+as begin
+	declare @dem int
+	set @dem = (select count(*) from NguoiDung where TenDangNhap=@TenDangNhap)
+	if @dem > 0
+		throw 50000, N'Tài khoản đã tồn tại',1;
+	else
+		insert into NguoiDung values (@TenDangNhap, @MatKhau, @TrangThai)
+end
+
+create procedure spPhanQuyen @TenDangNhap varchar(30), @MaChucNang int
+as begin
+	insert into PhanQuyen values (@TenDangNhap, @MaChucNang)
+end

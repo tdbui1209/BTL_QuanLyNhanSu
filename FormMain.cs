@@ -1,3 +1,4 @@
+using BTL_QuanyNhanSu.HeThong;
 using QuanLyNhanSu;
 using System.Data;
 
@@ -33,11 +34,13 @@ namespace BTL_QuanyNhanSu
                 mni_QuanLy.Enabled = lstChucNang.Contains("Quan Ly");
                 mni_NguoiDung.Enabled = lstChucNang.Contains("Nguoi Dung");
                 mni_ThongTinCaNhan.Enabled = lstChucNang.Contains("Thong Tin Ca Nhan");
-
-                // mniPhongBan.Enabled = lstChucNang.Contains("QuanLyPhongBan");
-                // mniChucVu.Enabled = lstChucNang.Contains("QuanLyChucVu");
-                // mniQuanLyNhanVien.Enabled = lstChucNang.Contains("QuanLyNhanVien");
             }
+        }
+
+        private void mni_TaoTaiKhoan_Click(object sender, EventArgs e)
+        {
+            FormTaoTaiKhoan form = new FormTaoTaiKhoan();
+            form.ShowDialog();
         }
     }
 }
