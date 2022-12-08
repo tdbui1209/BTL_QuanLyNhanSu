@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyNhanSu
+namespace BTL_QuanyNhanSu
 {
     class Database
     {
         public static void Execute(string strCommand, Dictionary<string, object> parameters)
         {
             //Bước 1: Tạo chuỗi kết nối
-            string strConnection = @"server=DESKTOP-67J0UH2\SQLEXPRESS;database=BTL_QuanLyNhanSu;uid=sa;pwd=1;";
+            string strConnection = @"Data Source=(localdb)\MSSqlLocalDb;Initial Catalog=BTL_QuanLyNhanSu;Integrated Security=True;";
             //string strConnection = @"server=.\SQLEXPRESS;database=QuanLyNhanSu;integrated security=true;";
             //Bước 2: Tạo ra kết nối dựa trên chuỗi và mở kết nối
             SqlConnection connection = new SqlConnection(strConnection);
@@ -31,7 +31,7 @@ namespace QuanLyNhanSu
         {
             //Thực hiện câu lệnh truy vấn trên
             //Bước 1: Tạo chuỗi kết nối
-            string strConnection = @"server=DESKTOP-67J0UH2\SQLEXPRESS;database=BTL_QuanLyNhanSu;uid=sa;pwd=1;";
+            string strConnection = @"Data Source=(localdb)\MSSqlLocalDb;Initial Catalog=BTL_QuanLyNhanSu;Integrated Security=True;";
             //Bước 2: Tạo ra kết nối dựa trên chuỗi và mở kết nối
             SqlConnection connection = new SqlConnection(strConnection);
             connection.Open();

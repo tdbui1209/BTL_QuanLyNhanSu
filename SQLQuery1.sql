@@ -1,5 +1,58 @@
 ﻿create database BTL_QuanLyNhanSu
 
+CREATE TABLE PhongBan
+(
+	MaPhongBan VARCHAR(3) PRIMARY KEY,
+	TenPhongBan NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE ChucVu
+(
+	MaChucVu VARCHAR(3) PRIMARY KEY,
+	TenChucVu NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE TinhThanh
+(
+	MaTinhThanh VARCHAR(3) PRIMARY KEY,
+	TenTinhThanh NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE DanToc
+(
+	MaDanToc VARCHAR(3) PRIMARY KEY,
+	TenDanToc NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE TonGiao
+(
+	MaTonGiao VARCHAR(3) PRIMARY KEY,
+	TenTonGiao NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE ChuyenMon
+(
+	MaChuyenMon VARCHAR(3) PRIMARY KEY,
+	TenChuyenMon NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE NgoaiNgu
+(
+	MaNgoaiNgu VARCHAR(3) PRIMARY KEY,
+	TenNgoaiNgu NVARCHAR(30) NOT NULL UNIQUE
+)
+CREATE TABLE NhanVien
+(
+	MaNhanVien INT IDENTITY PRIMARY KEY,
+	Ho NVARCHAR(15) NOT NULL,
+	Ten NVARCHAR(15) NOT NULL,
+	NgaySinh DATE NOT NULL,
+	GioiTinh BIT,
+	MaQueQuan VARCHAR(3) NOT NULL REFERENCES TinhThanh(MaTinhThanh),
+	MaDanToc VARCHAR(3) NOT NULL REFERENCES DanToc(MaDanToc),
+	MaTonGiao VARCHAR(3) NOT NULL REFERENCES TonGiao(MaTonGiao),
+	DiaChi NVARCHAR(100) NOT NULL,
+	MaTinhThanh VARCHAR(3) NOT NULL REFERENCES TinhThanh(MaTinhThanh),
+	DienThoai VARCHAR(10) NOT NULL UNIQUE,
+	Email VARCHAR(50) NOT NULL UNIQUE,
+	MaPhongBan VARCHAR(3) NOT NULL REFERENCES PhongBan(MaPhongBan),
+	MaChucVu VARCHAR(3) NOT NULL REFERENCES ChucVu(MaChucVu),
+)
+
 create table NguoiDung
 (
 	TenDangNhap varchar(30) primary key,
@@ -42,6 +95,7 @@ AS BEGIN
 	ELSE
 		THROW 50002,N'Tên đăng nhập không tồn tại',1;
 END
+GO
 
 CREATE FUNCTION ufLayPhanQuyen(@tenDangNhap VARCHAR(30))
 RETURNS TABLE
@@ -49,6 +103,7 @@ AS
 	RETURN (SELECT TenChucNang FROM ChucNang 
 	INNER JOIN PhanQuyen ON PhanQuyen.MaChucNang=ChucNang.MaChucNang
 	WHERE TenDangNhap=@tenDangNhap)
+GO
 
 create procedure spThemNguoiDung @TenDangNhap varchar(30), @MatKhau varchar(10), @TrangThai bit
 as begin
@@ -59,8 +114,10 @@ as begin
 	else
 		insert into NguoiDung values (@TenDangNhap, @MatKhau, @TrangThai)
 end
+GO
 
 create procedure spPhanQuyen @TenDangNhap varchar(30), @MaChucNang int
 as begin
 	insert into PhanQuyen values (@TenDangNhap, @MaChucNang)
 end
+GO
