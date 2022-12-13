@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDanhSachPhongBan));
             this.label1 = new System.Windows.Forms.Label();
             this.grbThongTin = new System.Windows.Forms.GroupBox();
-            this.chbMaPhongBan = new System.Windows.Forms.CheckBox();
-            this.chbTenPhongBan = new System.Windows.Forms.CheckBox();
-            this.tboMaPhongBan = new System.Windows.Forms.TextBox();
             this.tboTenPhongBan = new System.Windows.Forms.TextBox();
+            this.tboMaPhongBan = new System.Windows.Forms.TextBox();
+            this.chbTenPhongBan = new System.Windows.Forms.CheckBox();
+            this.chbMaPhongBan = new System.Windows.Forms.CheckBox();
             this.chbTimKiem = new System.Windows.Forms.CheckBox();
             this.btoThem = new System.Windows.Forms.Button();
             this.btoSua = new System.Windows.Forms.Button();
@@ -78,17 +78,19 @@
             this.grbThongTin.TabStop = false;
             this.grbThongTin.Text = "Thông tin phòng ban";
             // 
-            // chbMaPhongBan
+            // tboTenPhongBan
             // 
-            this.chbMaPhongBan.AutoSize = true;
-            this.chbMaPhongBan.Checked = true;
-            this.chbMaPhongBan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbMaPhongBan.Location = new System.Drawing.Point(6, 34);
-            this.chbMaPhongBan.Name = "chbMaPhongBan";
-            this.chbMaPhongBan.Size = new System.Drawing.Size(118, 21);
-            this.chbMaPhongBan.TabIndex = 0;
-            this.chbMaPhongBan.Text = "Mã phòng ban";
-            this.chbMaPhongBan.UseVisualStyleBackColor = true;
+            this.tboTenPhongBan.Location = new System.Drawing.Point(149, 67);
+            this.tboTenPhongBan.Name = "tboTenPhongBan";
+            this.tboTenPhongBan.Size = new System.Drawing.Size(368, 25);
+            this.tboTenPhongBan.TabIndex = 1;
+            // 
+            // tboMaPhongBan
+            // 
+            this.tboMaPhongBan.Location = new System.Drawing.Point(149, 32);
+            this.tboMaPhongBan.Name = "tboMaPhongBan";
+            this.tboMaPhongBan.Size = new System.Drawing.Size(149, 25);
+            this.tboMaPhongBan.TabIndex = 1;
             // 
             // chbTenPhongBan
             // 
@@ -102,19 +104,17 @@
             this.chbTenPhongBan.Text = "Tên phòng ban";
             this.chbTenPhongBan.UseVisualStyleBackColor = true;
             // 
-            // tboMaPhongBan
+            // chbMaPhongBan
             // 
-            this.tboMaPhongBan.Location = new System.Drawing.Point(149, 32);
-            this.tboMaPhongBan.Name = "tboMaPhongBan";
-            this.tboMaPhongBan.Size = new System.Drawing.Size(149, 25);
-            this.tboMaPhongBan.TabIndex = 1;
-            // 
-            // tboTenPhongBan
-            // 
-            this.tboTenPhongBan.Location = new System.Drawing.Point(149, 67);
-            this.tboTenPhongBan.Name = "tboTenPhongBan";
-            this.tboTenPhongBan.Size = new System.Drawing.Size(368, 25);
-            this.tboTenPhongBan.TabIndex = 1;
+            this.chbMaPhongBan.AutoSize = true;
+            this.chbMaPhongBan.Checked = true;
+            this.chbMaPhongBan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbMaPhongBan.Location = new System.Drawing.Point(6, 34);
+            this.chbMaPhongBan.Name = "chbMaPhongBan";
+            this.chbMaPhongBan.Size = new System.Drawing.Size(118, 21);
+            this.chbMaPhongBan.TabIndex = 0;
+            this.chbMaPhongBan.Text = "Mã phòng ban";
+            this.chbMaPhongBan.UseVisualStyleBackColor = true;
             // 
             // chbTimKiem
             // 
@@ -243,7 +243,6 @@
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "frmQuanLyDanhSachPhongBan";
             this.Text = "QUẢN LÝ DANH SÁCH PHÒNG BAN";
-            this.Load += new System.EventHandler(this.frmQuanLyDanhSachPhongBan_Load);
             this.grbThongTin.ResumeLayout(false);
             this.grbThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();

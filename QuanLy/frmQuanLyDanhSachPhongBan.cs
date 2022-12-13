@@ -158,10 +158,5 @@ namespace BTL_QuanyNhanSu.QuanLy
         {
             loadDgvPhongBan();
         }
-
-        private void frmQuanLyDanhSachPhongBan_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -31,10 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDanhSachNhanVien));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbTinhThanh = new System.Windows.Forms.ComboBox();
+            this.cbbTonGiao = new System.Windows.Forms.ComboBox();
+            this.cbbDanToc = new System.Windows.Forms.ComboBox();
+            this.cbbQueQuan = new System.Windows.Forms.ComboBox();
+            this.cbbPhongBan = new System.Windows.Forms.ComboBox();
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinhDen = new System.Windows.Forms.DateTimePicker();
             this.dtpNgaySinhTu = new System.Windows.Forms.DateTimePicker();
             this.tboTen = new System.Windows.Forms.TextBox();
+            this.tboMaNhanVien = new System.Windows.Forms.TextBox();
             this.tboHo = new System.Windows.Forms.TextBox();
             this.tboDienThoai = new System.Windows.Forms.TextBox();
             this.tboEmail = new System.Windows.Forms.TextBox();
@@ -89,12 +95,6 @@
             this.chbHienThiEmail = new System.Windows.Forms.CheckBox();
             this.chbHienThiGioiTinh = new System.Windows.Forms.CheckBox();
             this.chbHienThiNgaySinh = new System.Windows.Forms.CheckBox();
-            this.tboMaNhanVien = new System.Windows.Forms.TextBox();
-            this.cbbQueQuan = new System.Windows.Forms.ComboBox();
-            this.cbbDanToc = new System.Windows.Forms.ComboBox();
-            this.cbbTonGiao = new System.Windows.Forms.ComboBox();
-            this.cbbPhongBan = new System.Windows.Forms.ComboBox();
-            this.cbbTinhThanh = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -152,6 +152,61 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tiêu chí tìm kiếm";
             // 
+            // cbbTinhThanh
+            // 
+            this.cbbTinhThanh.DisplayMember = "TenTinhThanh";
+            this.cbbTinhThanh.Enabled = false;
+            this.cbbTinhThanh.FormattingEnabled = true;
+            this.cbbTinhThanh.Location = new System.Drawing.Point(613, 127);
+            this.cbbTinhThanh.Name = "cbbTinhThanh";
+            this.cbbTinhThanh.Size = new System.Drawing.Size(133, 25);
+            this.cbbTinhThanh.TabIndex = 19;
+            this.cbbTinhThanh.ValueMember = "MaTinhThanh";
+            // 
+            // cbbTonGiao
+            // 
+            this.cbbTonGiao.DisplayMember = "TenTonGiao";
+            this.cbbTonGiao.Enabled = false;
+            this.cbbTonGiao.FormattingEnabled = true;
+            this.cbbTonGiao.Location = new System.Drawing.Point(613, 91);
+            this.cbbTonGiao.Name = "cbbTonGiao";
+            this.cbbTonGiao.Size = new System.Drawing.Size(133, 25);
+            this.cbbTonGiao.TabIndex = 14;
+            this.cbbTonGiao.ValueMember = "MaTonGiao";
+            // 
+            // cbbDanToc
+            // 
+            this.cbbDanToc.DisplayMember = "TenDanToc";
+            this.cbbDanToc.Enabled = false;
+            this.cbbDanToc.FormattingEnabled = true;
+            this.cbbDanToc.Location = new System.Drawing.Point(362, 93);
+            this.cbbDanToc.Name = "cbbDanToc";
+            this.cbbDanToc.Size = new System.Drawing.Size(136, 25);
+            this.cbbDanToc.TabIndex = 12;
+            this.cbbDanToc.ValueMember = "MaDanToc";
+            // 
+            // cbbQueQuan
+            // 
+            this.cbbQueQuan.DisplayMember = "TenTinhThanh";
+            this.cbbQueQuan.Enabled = false;
+            this.cbbQueQuan.FormattingEnabled = true;
+            this.cbbQueQuan.Location = new System.Drawing.Point(127, 93);
+            this.cbbQueQuan.Name = "cbbQueQuan";
+            this.cbbQueQuan.Size = new System.Drawing.Size(115, 25);
+            this.cbbQueQuan.TabIndex = 10;
+            this.cbbQueQuan.ValueMember = "MaTinhThanh";
+            // 
+            // cbbPhongBan
+            // 
+            this.cbbPhongBan.DisplayMember = "TenPhongBan";
+            this.cbbPhongBan.Enabled = false;
+            this.cbbPhongBan.FormattingEnabled = true;
+            this.cbbPhongBan.Location = new System.Drawing.Point(362, 163);
+            this.cbbPhongBan.Name = "cbbPhongBan";
+            this.cbbPhongBan.Size = new System.Drawing.Size(136, 25);
+            this.cbbPhongBan.TabIndex = 3;
+            this.cbbPhongBan.ValueMember = "MaPhongBan";
+            // 
             // cbbChucVu
             // 
             this.cbbChucVu.DisplayMember = "TenChucVu";
@@ -188,6 +243,14 @@
             this.tboTen.Size = new System.Drawing.Size(133, 25);
             this.tboTen.TabIndex = 1;
             this.tboTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tboMaNhanVien
+            // 
+            this.tboMaNhanVien.Location = new System.Drawing.Point(127, 23);
+            this.tboMaNhanVien.Name = "tboMaNhanVien";
+            this.tboMaNhanVien.Size = new System.Drawing.Size(115, 25);
+            this.tboMaNhanVien.TabIndex = 1;
+            this.tboMaNhanVien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tboHo
             // 
@@ -417,6 +480,7 @@
             this.btoThem.Text = "Thêm";
             this.btoThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoThem.UseVisualStyleBackColor = true;
+            this.btoThem.Click += new System.EventHandler(this.btoThem_Click);
             // 
             // btoSua
             // 
@@ -636,10 +700,10 @@
             this.tabPage2.Controls.Add(this.chbHienThiEmail);
             this.tabPage2.Controls.Add(this.chbHienThiGioiTinh);
             this.tabPage2.Controls.Add(this.chbHienThiNgaySinh);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1108, 208);
+            this.tabPage2.Size = new System.Drawing.Size(1108, 210);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chế độ hiển thị";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -787,69 +851,6 @@
             this.chbHienThiNgaySinh.UseVisualStyleBackColor = true;
             this.chbHienThiNgaySinh.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
             // 
-            // tboMaNhanVien
-            // 
-            this.tboMaNhanVien.Location = new System.Drawing.Point(127, 23);
-            this.tboMaNhanVien.Name = "tboMaNhanVien";
-            this.tboMaNhanVien.Size = new System.Drawing.Size(115, 25);
-            this.tboMaNhanVien.TabIndex = 1;
-            this.tboMaNhanVien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // cbbQueQuan
-            // 
-            this.cbbQueQuan.DisplayMember = "TenTinhThanh";
-            this.cbbQueQuan.Enabled = false;
-            this.cbbQueQuan.FormattingEnabled = true;
-            this.cbbQueQuan.Location = new System.Drawing.Point(127, 93);
-            this.cbbQueQuan.Name = "cbbQueQuan";
-            this.cbbQueQuan.Size = new System.Drawing.Size(115, 25);
-            this.cbbQueQuan.TabIndex = 10;
-            this.cbbQueQuan.ValueMember = "MaTinhThanh";
-            // 
-            // cbbDanToc
-            // 
-            this.cbbDanToc.DisplayMember = "TenDanToc";
-            this.cbbDanToc.Enabled = false;
-            this.cbbDanToc.FormattingEnabled = true;
-            this.cbbDanToc.Location = new System.Drawing.Point(362, 93);
-            this.cbbDanToc.Name = "cbbDanToc";
-            this.cbbDanToc.Size = new System.Drawing.Size(136, 25);
-            this.cbbDanToc.TabIndex = 12;
-            this.cbbDanToc.ValueMember = "MaDanToc";
-            // 
-            // cbbTonGiao
-            // 
-            this.cbbTonGiao.DisplayMember = "TenTonGiao";
-            this.cbbTonGiao.Enabled = false;
-            this.cbbTonGiao.FormattingEnabled = true;
-            this.cbbTonGiao.Location = new System.Drawing.Point(613, 91);
-            this.cbbTonGiao.Name = "cbbTonGiao";
-            this.cbbTonGiao.Size = new System.Drawing.Size(133, 25);
-            this.cbbTonGiao.TabIndex = 14;
-            this.cbbTonGiao.ValueMember = "MaTonGiao";
-            // 
-            // cbbPhongBan
-            // 
-            this.cbbPhongBan.DisplayMember = "TenPhongBan";
-            this.cbbPhongBan.Enabled = false;
-            this.cbbPhongBan.FormattingEnabled = true;
-            this.cbbPhongBan.Location = new System.Drawing.Point(362, 163);
-            this.cbbPhongBan.Name = "cbbPhongBan";
-            this.cbbPhongBan.Size = new System.Drawing.Size(136, 25);
-            this.cbbPhongBan.TabIndex = 3;
-            this.cbbPhongBan.ValueMember = "MaPhongBan";
-            // 
-            // cbbTinhThanh
-            // 
-            this.cbbTinhThanh.DisplayMember = "TenTinhThanh";
-            this.cbbTinhThanh.Enabled = false;
-            this.cbbTinhThanh.FormattingEnabled = true;
-            this.cbbTinhThanh.Location = new System.Drawing.Point(613, 127);
-            this.cbbTinhThanh.Name = "cbbTinhThanh";
-            this.cbbTinhThanh.Size = new System.Drawing.Size(133, 25);
-            this.cbbTinhThanh.TabIndex = 19;
-            this.cbbTinhThanh.ValueMember = "MaTinhThanh";
-            // 
             // frmQuanLyDanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -866,7 +867,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmQuanLyDanhSachNhanVien";
             this.Text = "Quản lý danh sách nhân viên";
-            this.Load += new System.EventHandler(this.frmQLNhansu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

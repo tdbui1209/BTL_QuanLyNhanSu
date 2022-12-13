@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDanhSachChucVu));
             this.label1 = new System.Windows.Forms.Label();
             this.grbThongTin = new System.Windows.Forms.GroupBox();
-            this.chbMaChucVu = new System.Windows.Forms.CheckBox();
-            this.chbTenChucVu = new System.Windows.Forms.CheckBox();
-            this.tboMaChucVu = new System.Windows.Forms.TextBox();
             this.tboTenChucVu = new System.Windows.Forms.TextBox();
+            this.tboMaChucVu = new System.Windows.Forms.TextBox();
+            this.chbTenChucVu = new System.Windows.Forms.CheckBox();
+            this.chbMaChucVu = new System.Windows.Forms.CheckBox();
             this.btoThem = new System.Windows.Forms.Button();
             this.chbTimKiem = new System.Windows.Forms.CheckBox();
             this.btoSua = new System.Windows.Forms.Button();
@@ -78,15 +78,19 @@
             this.grbThongTin.TabStop = false;
             this.grbThongTin.Text = "Thông tin chức vụ";
             // 
-            // chbMaChucVu
+            // tboTenChucVu
             // 
-            this.chbMaChucVu.AutoSize = true;
-            this.chbMaChucVu.Location = new System.Drawing.Point(6, 33);
-            this.chbMaChucVu.Name = "chbMaChucVu";
-            this.chbMaChucVu.Size = new System.Drawing.Size(103, 21);
-            this.chbMaChucVu.TabIndex = 0;
-            this.chbMaChucVu.Text = "Mã chức vụ";
-            this.chbMaChucVu.UseVisualStyleBackColor = true;
+            this.tboTenChucVu.Location = new System.Drawing.Point(124, 67);
+            this.tboTenChucVu.Name = "tboTenChucVu";
+            this.tboTenChucVu.Size = new System.Drawing.Size(387, 25);
+            this.tboTenChucVu.TabIndex = 1;
+            // 
+            // tboMaChucVu
+            // 
+            this.tboMaChucVu.Location = new System.Drawing.Point(124, 31);
+            this.tboMaChucVu.Name = "tboMaChucVu";
+            this.tboMaChucVu.Size = new System.Drawing.Size(153, 25);
+            this.tboMaChucVu.TabIndex = 1;
             // 
             // chbTenChucVu
             // 
@@ -98,19 +102,15 @@
             this.chbTenChucVu.Text = "Tên chức vụ";
             this.chbTenChucVu.UseVisualStyleBackColor = true;
             // 
-            // tboMaChucVu
+            // chbMaChucVu
             // 
-            this.tboMaChucVu.Location = new System.Drawing.Point(124, 31);
-            this.tboMaChucVu.Name = "tboMaChucVu";
-            this.tboMaChucVu.Size = new System.Drawing.Size(153, 25);
-            this.tboMaChucVu.TabIndex = 1;
-            // 
-            // tboTenChucVu
-            // 
-            this.tboTenChucVu.Location = new System.Drawing.Point(124, 67);
-            this.tboTenChucVu.Name = "tboTenChucVu";
-            this.tboTenChucVu.Size = new System.Drawing.Size(387, 25);
-            this.tboTenChucVu.TabIndex = 1;
+            this.chbMaChucVu.AutoSize = true;
+            this.chbMaChucVu.Location = new System.Drawing.Point(6, 33);
+            this.chbMaChucVu.Name = "chbMaChucVu";
+            this.chbMaChucVu.Size = new System.Drawing.Size(103, 21);
+            this.chbMaChucVu.TabIndex = 0;
+            this.chbMaChucVu.Text = "Mã chức vụ";
+            this.chbMaChucVu.UseVisualStyleBackColor = true;
             // 
             // btoThem
             // 
