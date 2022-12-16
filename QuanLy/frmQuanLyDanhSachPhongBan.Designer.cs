@@ -47,6 +47,7 @@
             this.eprMessage = new System.Windows.Forms.ErrorProvider(this.components);
             this.stsMessage = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btoChon = new System.Windows.Forms.Button();
             this.grbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eprMessage)).BeginInit();
@@ -77,6 +78,7 @@
             this.grbThongTin.TabIndex = 1;
             this.grbThongTin.TabStop = false;
             this.grbThongTin.Text = "Thông tin phòng ban";
+            this.grbThongTin.Enter += new System.EventHandler(this.grbThongTin_Enter);
             // 
             // tboTenPhongBan
             // 
@@ -125,6 +127,7 @@
             this.chbTimKiem.TabIndex = 0;
             this.chbTimKiem.Text = "Tìm kiếm";
             this.chbTimKiem.UseVisualStyleBackColor = true;
+            this.chbTimKiem.Click += new System.EventHandler(this.chbTimKiem_CheckedChanged);
             // 
             // btoThem
             // 
@@ -136,6 +139,7 @@
             this.btoThem.Text = "Thêm";
             this.btoThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoThem.UseVisualStyleBackColor = true;
+            this.btoThem.Click += new System.EventHandler(this.btoThem_Click);
             // 
             // btoSua
             // 
@@ -147,6 +151,7 @@
             this.btoSua.Text = "Sửa";
             this.btoSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoSua.UseVisualStyleBackColor = true;
+            this.btoSua.Click += new System.EventHandler(this.btoSua_Click);
             // 
             // btoXoa
             // 
@@ -158,6 +163,7 @@
             this.btoXoa.Text = "Xóa";
             this.btoXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoXoa.UseVisualStyleBackColor = true;
+            this.btoXoa.Click += new System.EventHandler(this.btoXoa_Click);
             // 
             // btoTimKiem
             // 
@@ -169,6 +175,7 @@
             this.btoTimKiem.Text = "Tìm";
             this.btoTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoTimKiem.UseVisualStyleBackColor = true;
+            this.btoTimKiem.Click += new System.EventHandler(this.btoTimKiem_Click);
             // 
             // dgvPhongBan
             // 
@@ -226,6 +233,18 @@
             this.lblStatus.Size = new System.Drawing.Size(67, 17);
             this.lblStatus.Text = "Thông báo:";
             // 
+            // btoChon
+            // 
+            this.btoChon.Image = ((System.Drawing.Image)(resources.GetObject("btoChon.Image")));
+            this.btoChon.Location = new System.Drawing.Point(535, 168);
+            this.btoChon.Name = "btoChon";
+            this.btoChon.Size = new System.Drawing.Size(100, 35);
+            this.btoChon.TabIndex = 2;
+            this.btoChon.Text = "Chọn";
+            this.btoChon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btoChon.UseVisualStyleBackColor = true;
+            this.btoChon.Click += new System.EventHandler(this.btoChon_Click);
+            // 
             // frmQuanLyDanhSachPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -233,6 +252,7 @@
             this.ClientSize = new System.Drawing.Size(938, 545);
             this.Controls.Add(this.stsMessage);
             this.Controls.Add(this.dgvPhongBan);
+            this.Controls.Add(this.btoChon);
             this.Controls.Add(this.btoTimKiem);
             this.Controls.Add(this.btoXoa);
             this.Controls.Add(this.btoSua);
@@ -243,6 +263,8 @@
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "frmQuanLyDanhSachPhongBan";
             this.Text = "QUẢN LÝ DANH SÁCH PHÒNG BAN";
+            this.Load += new System.EventHandler(this.frmQuanLyDanhSachPhongBan_Load);
+            this.Click += new System.EventHandler(this.frmQuanLyDanhSachPhongBan_Load);
             this.grbThongTin.ResumeLayout(false);
             this.grbThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
@@ -273,5 +295,6 @@
         private ErrorProvider eprMessage;
         private StatusStrip stsMessage;
         private ToolStripStatusLabel lblStatus;
+        private Button btoChon;
     }
 }

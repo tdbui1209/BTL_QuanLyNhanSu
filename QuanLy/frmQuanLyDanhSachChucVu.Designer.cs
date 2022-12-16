@@ -122,6 +122,7 @@
             this.btoThem.Text = "Thêm";
             this.btoThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoThem.UseVisualStyleBackColor = true;
+            this.btoThem.Click += new System.EventHandler(this.btoThem_Click);
             // 
             // chbTimKiem
             // 
@@ -132,6 +133,7 @@
             this.chbTimKiem.TabIndex = 0;
             this.chbTimKiem.Text = "Tìm kiếm";
             this.chbTimKiem.UseVisualStyleBackColor = true;
+            this.chbTimKiem.Click += new System.EventHandler(this.chbTimKiem_CheckedChanged);
             // 
             // btoSua
             // 
@@ -143,6 +145,7 @@
             this.btoSua.Text = "Sửa";
             this.btoSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoSua.UseVisualStyleBackColor = true;
+            this.btoSua.Click += new System.EventHandler(this.btoSua_Click);
             // 
             // btoXoa
             // 
@@ -154,6 +157,7 @@
             this.btoXoa.Text = "Xóa";
             this.btoXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoXoa.UseVisualStyleBackColor = true;
+            this.btoXoa.Click += new System.EventHandler(this.btoXoa_Click);
             // 
             // btoTimKiem
             // 
@@ -165,6 +169,7 @@
             this.btoTimKiem.Text = "Tìm";
             this.btoTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoTimKiem.UseVisualStyleBackColor = true;
+            this.btoTimKiem.Click += new System.EventHandler(this.btoTimKiem_Click);
             // 
             // dgvChucVu
             // 

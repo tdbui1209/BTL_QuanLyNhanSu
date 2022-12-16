@@ -469,11 +469,12 @@
             this.btoTimKiem.Text = "Tìm kiếm";
             this.btoTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoTimKiem.UseVisualStyleBackColor = true;
+            this.btoTimKiem.Click += new System.EventHandler(this.btoTimKiem_Click);
             // 
             // btoThem
             // 
             this.btoThem.Image = ((System.Drawing.Image)(resources.GetObject("btoThem.Image")));
-            this.btoThem.Location = new System.Drawing.Point(139, 264);
+            this.btoThem.Location = new System.Drawing.Point(118, 264);
             this.btoThem.Name = "btoThem";
             this.btoThem.Size = new System.Drawing.Size(100, 35);
             this.btoThem.TabIndex = 4;
@@ -485,18 +486,19 @@
             // btoSua
             // 
             this.btoSua.Image = ((System.Drawing.Image)(resources.GetObject("btoSua.Image")));
-            this.btoSua.Location = new System.Drawing.Point(270, 264);
+            this.btoSua.Location = new System.Drawing.Point(224, 264);
             this.btoSua.Name = "btoSua";
             this.btoSua.Size = new System.Drawing.Size(100, 35);
             this.btoSua.TabIndex = 4;
             this.btoSua.Text = "Sửa";
             this.btoSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btoSua.UseVisualStyleBackColor = true;
+            this.btoSua.Click += new System.EventHandler(this.btoSua_Click);
             // 
             // btoXoa
             // 
             this.btoXoa.Image = ((System.Drawing.Image)(resources.GetObject("btoXoa.Image")));
-            this.btoXoa.Location = new System.Drawing.Point(410, 264);
+            this.btoXoa.Location = new System.Drawing.Point(330, 264);
             this.btoXoa.Name = "btoXoa";
             this.btoXoa.Size = new System.Drawing.Size(100, 35);
             this.btoXoa.TabIndex = 4;
@@ -867,6 +869,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmQuanLyDanhSachNhanVien";
             this.Text = "Quản lý danh sách nhân viên";
+            this.Load += new System.EventHandler(this.frmQuanLyDanhSachNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

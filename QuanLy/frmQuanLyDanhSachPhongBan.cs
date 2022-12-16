@@ -12,6 +12,16 @@ namespace BTL_QuanyNhanSu.QuanLy
 {
     public partial class frmQuanLyDanhSachPhongBan : Form
     {
+        private string maPhongBan = "";
+        public string MaPhongBan
+        {
+            get { return maPhongBan; }
+        }
+        private bool isEdited = false;
+        public bool IsEdited
+        {
+            get { return isEdited; }
+        }
         public frmQuanLyDanhSachPhongBan()
         {
             InitializeComponent();
@@ -157,6 +167,22 @@ namespace BTL_QuanyNhanSu.QuanLy
         private void btoTimKiem_Click(object sender, EventArgs e)
         {
             loadDgvPhongBan();
+        }
+
+        private void frmQuanLyDanhSachPhongBan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoChon_Click(object sender, EventArgs e)
+        {
+            maPhongBan = dgvPhongBan.CurrentRow.Cells["colMaPhongBan"].Value.ToString();
+            this.Close();
+        }
+
+        private void grbThongTin_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

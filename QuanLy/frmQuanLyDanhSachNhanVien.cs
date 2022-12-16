@@ -294,6 +294,7 @@ namespace BTL_QuanyNhanSu.QuanLy
             loadDgvNhanVien();
         }
 
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -327,6 +328,20 @@ namespace BTL_QuanyNhanSu.QuanLy
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmQuanLyDanhSachNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoSua_Click(object sender, EventArgs e)
+        {
+            //Lấy ra mã nhân viên của dòng đang chọn
+            int maNhanVien = (int)dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value;
+            //Truyền mã nhân viên lấy được vào Form sửa nhân viên
+            frmSuaNhanVien form = new frmSuaNhanVien(maNhanVien);
+            form.ShowDialog();
         }
     }
 }
