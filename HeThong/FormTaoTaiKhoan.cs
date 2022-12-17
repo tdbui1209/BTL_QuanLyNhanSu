@@ -1,5 +1,4 @@
-﻿using QuanLyNhanSu;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +28,12 @@ namespace BTL_QuanyNhanSu.HeThong
 
         private void button_Tao_Click(object sender, EventArgs e)
         {
+            bool created = false;
+            if (textBox_MatKhau.Text.Length == 0)
+            {
+                errorProvider1.SetError(textBox_MatKhau, "Mật khẩu không được để trống!");
+                return;
+            }
             if (textBox_NhapLaiMatKhau.Text != textBox_MatKhau.Text)
             {
                 errorProvider1.SetError(textBox_NhapLaiMatKhau, "Mật khẩu không khớp!");
@@ -44,6 +49,7 @@ namespace BTL_QuanyNhanSu.HeThong
             {
                 Database.Execute(strCommand, parameters);
                 sttStrip.Text = "Thông báo: Tạo tài khoản thành công!";
+                created = true;
             }
             catch (Exception ex)
             {
@@ -52,30 +58,33 @@ namespace BTL_QuanyNhanSu.HeThong
             }
 
             // Phan Quyen Chuc Nang
-            strCommand = "EXEC spPhanQuyen @TenDangNhap, @MaChucNang";
-
-            if (checkBox_HeThong.Checked)
+            if (created) 
             {
-                parameters = new Dictionary<string, object>();
-                parameters.Add("@TenDangNhap", textBox_TenDangNhap.Text);
-                parameters.Add("@MaChucNang", 1);
-                Database.Execute(strCommand, parameters);
-            }
+                strCommand = "EXEC spPhanQuyen @TenDangNhap, @MaChucNang";
 
-            if (checkBox_QuanLyPhongBan.Checked)
-            {
-                parameters = new Dictionary<string, object>();
-                parameters.Add("@TenDangNhap", textBox_TenDangNhap.Text);
-                parameters.Add("@MaChucNang", 7);
-                Database.Execute(strCommand, parameters);
-            }
+                if (checkBox_HeThong.Checked)
+                {
+                    parameters = new Dictionary<string, object>();
+                    parameters.Add("@TenDangNhap", textBox_TenDangNhap.Text);
+                    parameters.Add("@MaChucNang", 1);
+                    Database.Execute(strCommand, parameters);
+                }
 
-            if (checkBox_QuanLyNhanSu.Checked)
-            {
-                parameters = new Dictionary<string, object>();
-                parameters.Add("@TenDangNhap", textBox_TenDangNhap.Text);
-                parameters.Add("@MaChucNang", 8);
-                Database.Execute(strCommand, parameters);
+                if (checkBox_QuanLyPhongBan.Checked)
+                {
+                    parameters = new Dictionary<string, object>();
+                    parameters.Add("@TenDangNhap", textBox_TenDangNhap.Text);
+                    parameters.Add("@MaChucNang", 7);
+                    Database.Execute(strCommand, parameters);
+                }
+
+                if (checkBox_QuanLyNhanSu.Checked)
+                {
+                    parameters = new Dictionary<string, object>();
+                    parameters.Add("@TenDangNhap", textBox_TenDangNhap.Text);
+                    parameters.Add("@MaChucNang", 8);
+                    Database.Execute(strCommand, parameters);
+                }
             }
         }
     }

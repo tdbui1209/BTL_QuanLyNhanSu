@@ -57,9 +57,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(249, 9);
+            this.label1.Location = new System.Drawing.Point(193, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 32);
+            this.label1.Size = new System.Drawing.Size(552, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ DANH SÁCH CHỨC VỤ";
             // 
@@ -82,14 +82,14 @@
             // 
             this.tboTenChucVu.Location = new System.Drawing.Point(124, 67);
             this.tboTenChucVu.Name = "tboTenChucVu";
-            this.tboTenChucVu.Size = new System.Drawing.Size(387, 25);
+            this.tboTenChucVu.Size = new System.Drawing.Size(387, 29);
             this.tboTenChucVu.TabIndex = 1;
             // 
             // tboMaChucVu
             // 
             this.tboMaChucVu.Location = new System.Drawing.Point(124, 31);
             this.tboMaChucVu.Name = "tboMaChucVu";
-            this.tboMaChucVu.Size = new System.Drawing.Size(153, 25);
+            this.tboMaChucVu.Size = new System.Drawing.Size(153, 29);
             this.tboMaChucVu.TabIndex = 1;
             // 
             // chbTenChucVu
@@ -97,7 +97,7 @@
             this.chbTenChucVu.AutoSize = true;
             this.chbTenChucVu.Location = new System.Drawing.Point(6, 69);
             this.chbTenChucVu.Name = "chbTenChucVu";
-            this.chbTenChucVu.Size = new System.Drawing.Size(109, 21);
+            this.chbTenChucVu.Size = new System.Drawing.Size(137, 26);
             this.chbTenChucVu.TabIndex = 0;
             this.chbTenChucVu.Text = "Tên chức vụ";
             this.chbTenChucVu.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.chbMaChucVu.AutoSize = true;
             this.chbMaChucVu.Location = new System.Drawing.Point(6, 33);
             this.chbMaChucVu.Name = "chbMaChucVu";
-            this.chbMaChucVu.Size = new System.Drawing.Size(103, 21);
+            this.chbMaChucVu.Size = new System.Drawing.Size(129, 26);
             this.chbMaChucVu.TabIndex = 0;
             this.chbMaChucVu.Text = "Mã chức vụ";
             this.chbMaChucVu.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.chbTimKiem.AutoSize = true;
             this.chbTimKiem.Location = new System.Drawing.Point(12, 177);
             this.chbTimKiem.Name = "chbTimKiem";
-            this.chbTimKiem.Size = new System.Drawing.Size(87, 21);
+            this.chbTimKiem.Size = new System.Drawing.Size(111, 26);
             this.chbTimKiem.TabIndex = 0;
             this.chbTimKiem.Text = "Tìm kiếm";
             this.chbTimKiem.UseVisualStyleBackColor = true;
@@ -188,10 +188,12 @@
             this.dgvChucVu.MultiSelect = false;
             this.dgvChucVu.Name = "dgvChucVu";
             this.dgvChucVu.ReadOnly = true;
+            this.dgvChucVu.RowHeadersWidth = 51;
             this.dgvChucVu.RowTemplate.Height = 25;
             this.dgvChucVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChucVu.Size = new System.Drawing.Size(914, 296);
             this.dgvChucVu.TabIndex = 3;
+            this.dgvChucVu.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_RowEnter);
             // 
             // colMaChucVu
             // 
@@ -217,23 +219,24 @@
             // 
             // stsMessage
             // 
+            this.stsMessage.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.stsMessage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.stsMessage.Location = new System.Drawing.Point(0, 523);
+            this.stsMessage.Location = new System.Drawing.Point(0, 519);
             this.stsMessage.Name = "stsMessage";
-            this.stsMessage.Size = new System.Drawing.Size(938, 22);
+            this.stsMessage.Size = new System.Drawing.Size(938, 26);
             this.stsMessage.TabIndex = 4;
             this.stsMessage.Text = "statusStrip1";
             // 
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(67, 17);
+            this.lblStatus.Size = new System.Drawing.Size(84, 20);
             this.lblStatus.Text = "Thông báo:";
             // 
             // frmQuanLyDanhSachChucVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 545);
             this.Controls.Add(this.stsMessage);

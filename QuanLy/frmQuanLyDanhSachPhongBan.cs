@@ -79,6 +79,7 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void btoThem_Click(object sender, EventArgs e)
         {
+            // MessageBox.Show("alo");
             eprMessage.Clear();
             //Kiểm tra lỗi nhập form (để trống, sai định dạng)
             if (checkForm() == false)
@@ -152,6 +153,7 @@ namespace BTL_QuanyNhanSu.QuanLy
                 string strCommand = "EXEC spXoaPhongBan @maPhongBan";
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
                 parameters.Add("@maPhongBan", dgvPhongBan.CurrentRow.Cells["colMaPhongBan"].Value.ToString());
+                MessageBox.Show(dgvPhongBan.CurrentRow.Cells["colMaPhongBan"].Value.ToString());
                 Database.Execute(strCommand, parameters);
                 loadDgvPhongBan();
                 lblStatus.Text = "Thông báo: Xóa dữ liệu thành công";

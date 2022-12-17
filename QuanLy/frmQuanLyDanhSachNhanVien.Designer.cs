@@ -106,9 +106,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(323, 25);
+            this.label1.Location = new System.Drawing.Point(282, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(468, 32);
+            this.label1.Size = new System.Drawing.Size(581, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ DANH SÁCH NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,7 +159,7 @@
             this.cbbTinhThanh.FormattingEnabled = true;
             this.cbbTinhThanh.Location = new System.Drawing.Point(613, 127);
             this.cbbTinhThanh.Name = "cbbTinhThanh";
-            this.cbbTinhThanh.Size = new System.Drawing.Size(133, 25);
+            this.cbbTinhThanh.Size = new System.Drawing.Size(133, 30);
             this.cbbTinhThanh.TabIndex = 19;
             this.cbbTinhThanh.ValueMember = "MaTinhThanh";
             // 
@@ -170,7 +170,7 @@
             this.cbbTonGiao.FormattingEnabled = true;
             this.cbbTonGiao.Location = new System.Drawing.Point(613, 91);
             this.cbbTonGiao.Name = "cbbTonGiao";
-            this.cbbTonGiao.Size = new System.Drawing.Size(133, 25);
+            this.cbbTonGiao.Size = new System.Drawing.Size(133, 30);
             this.cbbTonGiao.TabIndex = 14;
             this.cbbTonGiao.ValueMember = "MaTonGiao";
             // 
@@ -181,7 +181,7 @@
             this.cbbDanToc.FormattingEnabled = true;
             this.cbbDanToc.Location = new System.Drawing.Point(362, 93);
             this.cbbDanToc.Name = "cbbDanToc";
-            this.cbbDanToc.Size = new System.Drawing.Size(136, 25);
+            this.cbbDanToc.Size = new System.Drawing.Size(136, 30);
             this.cbbDanToc.TabIndex = 12;
             this.cbbDanToc.ValueMember = "MaDanToc";
             // 
@@ -192,7 +192,7 @@
             this.cbbQueQuan.FormattingEnabled = true;
             this.cbbQueQuan.Location = new System.Drawing.Point(127, 93);
             this.cbbQueQuan.Name = "cbbQueQuan";
-            this.cbbQueQuan.Size = new System.Drawing.Size(115, 25);
+            this.cbbQueQuan.Size = new System.Drawing.Size(115, 30);
             this.cbbQueQuan.TabIndex = 10;
             this.cbbQueQuan.ValueMember = "MaTinhThanh";
             // 
@@ -203,7 +203,7 @@
             this.cbbPhongBan.FormattingEnabled = true;
             this.cbbPhongBan.Location = new System.Drawing.Point(362, 163);
             this.cbbPhongBan.Name = "cbbPhongBan";
-            this.cbbPhongBan.Size = new System.Drawing.Size(136, 25);
+            this.cbbPhongBan.Size = new System.Drawing.Size(136, 30);
             this.cbbPhongBan.TabIndex = 3;
             this.cbbPhongBan.ValueMember = "MaPhongBan";
             // 
@@ -214,7 +214,7 @@
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Location = new System.Drawing.Point(127, 163);
             this.cbbChucVu.Name = "cbbChucVu";
-            this.cbbChucVu.Size = new System.Drawing.Size(115, 25);
+            this.cbbChucVu.Size = new System.Drawing.Size(115, 30);
             this.cbbChucVu.TabIndex = 26;
             this.cbbChucVu.ValueMember = "MaChucVu";
             // 
@@ -224,7 +224,7 @@
             this.dtpNgaySinhDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinhDen.Location = new System.Drawing.Point(383, 56);
             this.dtpNgaySinhDen.Name = "dtpNgaySinhDen";
-            this.dtpNgaySinhDen.Size = new System.Drawing.Size(115, 25);
+            this.dtpNgaySinhDen.Size = new System.Drawing.Size(115, 29);
             this.dtpNgaySinhDen.TabIndex = 5;
             // 
             // dtpNgaySinhTu
@@ -233,14 +233,14 @@
             this.dtpNgaySinhTu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinhTu.Location = new System.Drawing.Point(127, 59);
             this.dtpNgaySinhTu.Name = "dtpNgaySinhTu";
-            this.dtpNgaySinhTu.Size = new System.Drawing.Size(115, 25);
+            this.dtpNgaySinhTu.Size = new System.Drawing.Size(115, 29);
             this.dtpNgaySinhTu.TabIndex = 4;
             // 
             // tboTen
             // 
             this.tboTen.Location = new System.Drawing.Point(613, 25);
             this.tboTen.Name = "tboTen";
-            this.tboTen.Size = new System.Drawing.Size(133, 25);
+            this.tboTen.Size = new System.Drawing.Size(133, 29);
             this.tboTen.TabIndex = 1;
             this.tboTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -248,7 +248,7 @@
             // 
             this.tboMaNhanVien.Location = new System.Drawing.Point(127, 23);
             this.tboMaNhanVien.Name = "tboMaNhanVien";
-            this.tboMaNhanVien.Size = new System.Drawing.Size(115, 25);
+            this.tboMaNhanVien.Size = new System.Drawing.Size(115, 29);
             this.tboMaNhanVien.TabIndex = 1;
             this.tboMaNhanVien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -256,7 +256,7 @@
             // 
             this.tboHo.Location = new System.Drawing.Point(362, 23);
             this.tboHo.Name = "tboHo";
-            this.tboHo.Size = new System.Drawing.Size(136, 25);
+            this.tboHo.Size = new System.Drawing.Size(136, 29);
             this.tboHo.TabIndex = 2;
             this.tboHo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -264,7 +264,7 @@
             // 
             this.tboDienThoai.Location = new System.Drawing.Point(613, 55);
             this.tboDienThoai.Name = "tboDienThoai";
-            this.tboDienThoai.Size = new System.Drawing.Size(133, 25);
+            this.tboDienThoai.Size = new System.Drawing.Size(133, 29);
             this.tboDienThoai.TabIndex = 21;
             this.tboDienThoai.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -272,7 +272,7 @@
             // 
             this.tboEmail.Location = new System.Drawing.Point(613, 163);
             this.tboEmail.Name = "tboEmail";
-            this.tboEmail.Size = new System.Drawing.Size(285, 25);
+            this.tboEmail.Size = new System.Drawing.Size(285, 29);
             this.tboEmail.TabIndex = 1;
             this.tboEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -280,7 +280,7 @@
             // 
             this.tboDiaChi.Location = new System.Drawing.Point(127, 127);
             this.tboDiaChi.Name = "tboDiaChi";
-            this.tboDiaChi.Size = new System.Drawing.Size(371, 25);
+            this.tboDiaChi.Size = new System.Drawing.Size(371, 29);
             this.tboDiaChi.TabIndex = 17;
             this.tboDiaChi.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -289,7 +289,7 @@
             this.chbDienThoai.AutoSize = true;
             this.chbDienThoai.Location = new System.Drawing.Point(515, 59);
             this.chbDienThoai.Name = "chbDienThoai";
-            this.chbDienThoai.Size = new System.Drawing.Size(92, 21);
+            this.chbDienThoai.Size = new System.Drawing.Size(116, 26);
             this.chbDienThoai.TabIndex = 20;
             this.chbDienThoai.Text = "Điện thoại";
             this.chbDienThoai.UseVisualStyleBackColor = true;
@@ -301,7 +301,7 @@
             this.chbNu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbNu.Location = new System.Drawing.Point(851, 27);
             this.chbNu.Name = "chbNu";
-            this.chbNu.Size = new System.Drawing.Size(47, 21);
+            this.chbNu.Size = new System.Drawing.Size(58, 26);
             this.chbNu.TabIndex = 29;
             this.chbNu.Text = "Nữ";
             this.chbNu.UseVisualStyleBackColor = true;
@@ -314,7 +314,7 @@
             this.chbNam.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbNam.Location = new System.Drawing.Point(787, 27);
             this.chbNam.Name = "chbNam";
-            this.chbNam.Size = new System.Drawing.Size(58, 21);
+            this.chbNam.Size = new System.Drawing.Size(71, 26);
             this.chbNam.TabIndex = 28;
             this.chbNam.Text = "Nam";
             this.chbNam.UseVisualStyleBackColor = true;
@@ -324,7 +324,7 @@
             this.chbTen.AutoSize = true;
             this.chbTen.Location = new System.Drawing.Point(515, 27);
             this.chbTen.Name = "chbTen";
-            this.chbTen.Size = new System.Drawing.Size(52, 21);
+            this.chbTen.Size = new System.Drawing.Size(65, 26);
             this.chbTen.TabIndex = 3;
             this.chbTen.Text = "Tên";
             this.chbTen.UseVisualStyleBackColor = true;
@@ -334,7 +334,7 @@
             this.chbHo.AutoSize = true;
             this.chbHo.Location = new System.Drawing.Point(258, 27);
             this.chbHo.Name = "chbHo";
-            this.chbHo.Size = new System.Drawing.Size(45, 21);
+            this.chbHo.Size = new System.Drawing.Size(56, 26);
             this.chbHo.TabIndex = 6;
             this.chbHo.Text = "Họ";
             this.chbHo.UseVisualStyleBackColor = true;
@@ -344,7 +344,7 @@
             this.chbNgaySinhDen.AutoSize = true;
             this.chbNgaySinhDen.Location = new System.Drawing.Point(258, 59);
             this.chbNgaySinhDen.Name = "chbNgaySinhDen";
-            this.chbNgaySinhDen.Size = new System.Drawing.Size(119, 21);
+            this.chbNgaySinhDen.Size = new System.Drawing.Size(151, 26);
             this.chbNgaySinhDen.TabIndex = 9;
             this.chbNgaySinhDen.Text = "Ngày sinh đến";
             this.chbNgaySinhDen.UseVisualStyleBackColor = true;
@@ -355,7 +355,7 @@
             this.chbEmail.AutoSize = true;
             this.chbEmail.Location = new System.Drawing.Point(515, 165);
             this.chbEmail.Name = "chbEmail";
-            this.chbEmail.Size = new System.Drawing.Size(64, 21);
+            this.chbEmail.Size = new System.Drawing.Size(79, 26);
             this.chbEmail.TabIndex = 0;
             this.chbEmail.Text = "Email";
             this.chbEmail.UseVisualStyleBackColor = true;
@@ -366,7 +366,7 @@
             this.chbTinhThanh.AutoSize = true;
             this.chbTinhThanh.Location = new System.Drawing.Point(515, 129);
             this.chbTinhThanh.Name = "chbTinhThanh";
-            this.chbTinhThanh.Size = new System.Drawing.Size(95, 21);
+            this.chbTinhThanh.Size = new System.Drawing.Size(118, 26);
             this.chbTinhThanh.TabIndex = 18;
             this.chbTinhThanh.Text = "Tỉnh thành";
             this.chbTinhThanh.UseVisualStyleBackColor = true;
@@ -377,7 +377,7 @@
             this.chbTonGiao.AutoSize = true;
             this.chbTonGiao.Location = new System.Drawing.Point(515, 93);
             this.chbTonGiao.Name = "chbTonGiao";
-            this.chbTonGiao.Size = new System.Drawing.Size(83, 21);
+            this.chbTonGiao.Size = new System.Drawing.Size(106, 26);
             this.chbTonGiao.TabIndex = 15;
             this.chbTonGiao.Text = "Tôn giáo";
             this.chbTonGiao.UseVisualStyleBackColor = true;
@@ -388,7 +388,7 @@
             this.chbPhongBan.AutoSize = true;
             this.chbPhongBan.Location = new System.Drawing.Point(258, 165);
             this.chbPhongBan.Name = "chbPhongBan";
-            this.chbPhongBan.Size = new System.Drawing.Size(97, 21);
+            this.chbPhongBan.Size = new System.Drawing.Size(123, 26);
             this.chbPhongBan.TabIndex = 25;
             this.chbPhongBan.Text = "Phòng ban";
             this.chbPhongBan.UseVisualStyleBackColor = true;
@@ -399,7 +399,7 @@
             this.chbDanToc.AutoSize = true;
             this.chbDanToc.Location = new System.Drawing.Point(258, 95);
             this.chbDanToc.Name = "chbDanToc";
-            this.chbDanToc.Size = new System.Drawing.Size(78, 21);
+            this.chbDanToc.Size = new System.Drawing.Size(97, 26);
             this.chbDanToc.TabIndex = 13;
             this.chbDanToc.Text = "Dân tộc";
             this.chbDanToc.UseVisualStyleBackColor = true;
@@ -410,7 +410,7 @@
             this.chbChucVu.AutoSize = true;
             this.chbChucVu.Location = new System.Drawing.Point(9, 165);
             this.chbChucVu.Name = "chbChucVu";
-            this.chbChucVu.Size = new System.Drawing.Size(83, 21);
+            this.chbChucVu.Size = new System.Drawing.Size(103, 26);
             this.chbChucVu.TabIndex = 27;
             this.chbChucVu.Text = "Chức vụ";
             this.chbChucVu.UseVisualStyleBackColor = true;
@@ -421,7 +421,7 @@
             this.chbDiaChi.AutoSize = true;
             this.chbDiaChi.Location = new System.Drawing.Point(9, 129);
             this.chbDiaChi.Name = "chbDiaChi";
-            this.chbDiaChi.Size = new System.Drawing.Size(72, 21);
+            this.chbDiaChi.Size = new System.Drawing.Size(89, 26);
             this.chbDiaChi.TabIndex = 16;
             this.chbDiaChi.Text = "Địa chỉ";
             this.chbDiaChi.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@
             this.chbQueQuan.AutoSize = true;
             this.chbQueQuan.Location = new System.Drawing.Point(9, 93);
             this.chbQueQuan.Name = "chbQueQuan";
-            this.chbQueQuan.Size = new System.Drawing.Size(91, 21);
+            this.chbQueQuan.Size = new System.Drawing.Size(114, 26);
             this.chbQueQuan.TabIndex = 11;
             this.chbQueQuan.Text = "Quê quán";
             this.chbQueQuan.UseVisualStyleBackColor = true;
@@ -443,7 +443,7 @@
             this.chbNgaySinhTu.AutoSize = true;
             this.chbNgaySinhTu.Location = new System.Drawing.Point(9, 59);
             this.chbNgaySinhTu.Name = "chbNgaySinhTu";
-            this.chbNgaySinhTu.Size = new System.Drawing.Size(109, 21);
+            this.chbNgaySinhTu.Size = new System.Drawing.Size(137, 26);
             this.chbNgaySinhTu.TabIndex = 8;
             this.chbNgaySinhTu.Text = "Ngày sinh từ";
             this.chbNgaySinhTu.UseVisualStyleBackColor = true;
@@ -454,7 +454,7 @@
             this.chbMaNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.chbMaNhanVien.Location = new System.Drawing.Point(9, 27);
             this.chbMaNhanVien.Name = "chbMaNhanVien";
-            this.chbMaNhanVien.Size = new System.Drawing.Size(112, 21);
+            this.chbMaNhanVien.Size = new System.Drawing.Size(141, 26);
             this.chbMaNhanVien.TabIndex = 0;
             this.chbMaNhanVien.Text = "Mã nhân viên";
             this.chbMaNhanVien.UseVisualStyleBackColor = true;
@@ -523,10 +523,10 @@
             // 
             this.tabPage1.Controls.Add(this.trvTrinhDo);
             this.tabPage1.Controls.Add(this.dgvNhanVien);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1108, 208);
+            this.tabPage1.Size = new System.Drawing.Size(1108, 203);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách nhân viên";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -570,6 +570,7 @@
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.ReadOnly = true;
+            this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 25;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(890, 196);
@@ -579,6 +580,7 @@
             // 
             this.colMaNhanVien.DataPropertyName = "MaNhanVien";
             this.colMaNhanVien.HeaderText = "Mã nhân viên";
+            this.colMaNhanVien.MinimumWidth = 6;
             this.colMaNhanVien.Name = "colMaNhanVien";
             this.colMaNhanVien.ReadOnly = true;
             this.colMaNhanVien.Width = 125;
@@ -605,20 +607,25 @@
             // 
             this.colNgaySinh.DataPropertyName = "NgaySinh";
             this.colNgaySinh.HeaderText = "Ngày Sinh";
+            this.colNgaySinh.MinimumWidth = 6;
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.ReadOnly = true;
+            this.colNgaySinh.Width = 125;
             // 
             // colGioiTinh
             // 
             this.colGioiTinh.DataPropertyName = "GioiTinh";
             this.colGioiTinh.HeaderText = "Giới tính";
+            this.colGioiTinh.MinimumWidth = 6;
             this.colGioiTinh.Name = "colGioiTinh";
             this.colGioiTinh.ReadOnly = true;
+            this.colGioiTinh.Width = 125;
             // 
             // colDanToc
             // 
             this.colDanToc.DataPropertyName = "TenDanToc";
             this.colDanToc.HeaderText = "Dân tộc";
+            this.colDanToc.MinimumWidth = 6;
             this.colDanToc.Name = "colDanToc";
             this.colDanToc.ReadOnly = true;
             this.colDanToc.Width = 125;
@@ -627,6 +634,7 @@
             // 
             this.colTonGiao.DataPropertyName = "TenTonGiao";
             this.colTonGiao.HeaderText = "Tôn giáo";
+            this.colTonGiao.MinimumWidth = 6;
             this.colTonGiao.Name = "colTonGiao";
             this.colTonGiao.ReadOnly = true;
             this.colTonGiao.Width = 125;
@@ -635,6 +643,7 @@
             // 
             this.colQueQuan.DataPropertyName = "TenQueQuan";
             this.colQueQuan.HeaderText = "Quê quán";
+            this.colQueQuan.MinimumWidth = 6;
             this.colQueQuan.Name = "colQueQuan";
             this.colQueQuan.ReadOnly = true;
             this.colQueQuan.Width = 125;
@@ -652,6 +661,7 @@
             // 
             this.colTinhThanh.DataPropertyName = "TenTinhThanh";
             this.colTinhThanh.HeaderText = "Tỉnh thành";
+            this.colTinhThanh.MinimumWidth = 6;
             this.colTinhThanh.Name = "colTinhThanh";
             this.colTinhThanh.ReadOnly = true;
             this.colTinhThanh.Width = 125;
@@ -669,6 +679,7 @@
             // 
             this.colDienThoai.DataPropertyName = "DienThoai";
             this.colDienThoai.HeaderText = "Điện thoại";
+            this.colDienThoai.MinimumWidth = 6;
             this.colDienThoai.Name = "colDienThoai";
             this.colDienThoai.ReadOnly = true;
             this.colDienThoai.Width = 125;
@@ -677,6 +688,7 @@
             // 
             this.colChucVu.DataPropertyName = "TenChucVu";
             this.colChucVu.HeaderText = "Chức vụ";
+            this.colChucVu.MinimumWidth = 6;
             this.colChucVu.Name = "colChucVu";
             this.colChucVu.ReadOnly = true;
             this.colChucVu.Width = 150;
@@ -685,6 +697,7 @@
             // 
             this.colPhongBan.DataPropertyName = "TenPhongBan";
             this.colPhongBan.HeaderText = "Phòng ban";
+            this.colPhongBan.MinimumWidth = 6;
             this.colPhongBan.Name = "colPhongBan";
             this.colPhongBan.ReadOnly = true;
             this.colPhongBan.Width = 150;
@@ -702,10 +715,10 @@
             this.tabPage2.Controls.Add(this.chbHienThiEmail);
             this.tabPage2.Controls.Add(this.chbHienThiGioiTinh);
             this.tabPage2.Controls.Add(this.chbHienThiNgaySinh);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1108, 210);
+            this.tabPage2.Size = new System.Drawing.Size(1108, 205);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chế độ hiển thị";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -717,7 +730,7 @@
             this.chbHienThiTonGiao.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiTonGiao.Location = new System.Drawing.Point(6, 87);
             this.chbHienThiTonGiao.Name = "chbHienThiTonGiao";
-            this.chbHienThiTonGiao.Size = new System.Drawing.Size(83, 21);
+            this.chbHienThiTonGiao.Size = new System.Drawing.Size(106, 26);
             this.chbHienThiTonGiao.TabIndex = 0;
             this.chbHienThiTonGiao.Text = "Tôn giáo";
             this.chbHienThiTonGiao.UseVisualStyleBackColor = true;
@@ -730,7 +743,7 @@
             this.chbHienThiDanToc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiDanToc.Location = new System.Drawing.Point(6, 60);
             this.chbHienThiDanToc.Name = "chbHienThiDanToc";
-            this.chbHienThiDanToc.Size = new System.Drawing.Size(78, 21);
+            this.chbHienThiDanToc.Size = new System.Drawing.Size(97, 26);
             this.chbHienThiDanToc.TabIndex = 0;
             this.chbHienThiDanToc.Text = "Dân tộc";
             this.chbHienThiDanToc.UseVisualStyleBackColor = true;
@@ -743,7 +756,7 @@
             this.chbHienThiQueQuan.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiQueQuan.Location = new System.Drawing.Point(6, 33);
             this.chbHienThiQueQuan.Name = "chbHienThiQueQuan";
-            this.chbHienThiQueQuan.Size = new System.Drawing.Size(91, 21);
+            this.chbHienThiQueQuan.Size = new System.Drawing.Size(114, 26);
             this.chbHienThiQueQuan.TabIndex = 0;
             this.chbHienThiQueQuan.Text = "Quê quán";
             this.chbHienThiQueQuan.UseVisualStyleBackColor = true;
@@ -756,7 +769,7 @@
             this.chbHienThiDienThoai.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiDienThoai.Location = new System.Drawing.Point(221, 87);
             this.chbHienThiDienThoai.Name = "chbHienThiDienThoai";
-            this.chbHienThiDienThoai.Size = new System.Drawing.Size(92, 21);
+            this.chbHienThiDienThoai.Size = new System.Drawing.Size(116, 26);
             this.chbHienThiDienThoai.TabIndex = 0;
             this.chbHienThiDienThoai.Text = "Điện thoại";
             this.chbHienThiDienThoai.UseVisualStyleBackColor = true;
@@ -769,7 +782,7 @@
             this.chbHienThiTinhThanh.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiTinhThanh.Location = new System.Drawing.Point(221, 60);
             this.chbHienThiTinhThanh.Name = "chbHienThiTinhThanh";
-            this.chbHienThiTinhThanh.Size = new System.Drawing.Size(95, 21);
+            this.chbHienThiTinhThanh.Size = new System.Drawing.Size(118, 26);
             this.chbHienThiTinhThanh.TabIndex = 0;
             this.chbHienThiTinhThanh.Text = "Tỉnh thành";
             this.chbHienThiTinhThanh.UseVisualStyleBackColor = true;
@@ -782,7 +795,7 @@
             this.chbHienThiDiaChi.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiDiaChi.Location = new System.Drawing.Point(221, 33);
             this.chbHienThiDiaChi.Name = "chbHienThiDiaChi";
-            this.chbHienThiDiaChi.Size = new System.Drawing.Size(72, 21);
+            this.chbHienThiDiaChi.Size = new System.Drawing.Size(89, 26);
             this.chbHienThiDiaChi.TabIndex = 0;
             this.chbHienThiDiaChi.Text = "Địa chỉ";
             this.chbHienThiDiaChi.UseVisualStyleBackColor = true;
@@ -795,7 +808,7 @@
             this.chbHienThiPhongBan.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiPhongBan.Location = new System.Drawing.Point(417, 60);
             this.chbHienThiPhongBan.Name = "chbHienThiPhongBan";
-            this.chbHienThiPhongBan.Size = new System.Drawing.Size(97, 21);
+            this.chbHienThiPhongBan.Size = new System.Drawing.Size(123, 26);
             this.chbHienThiPhongBan.TabIndex = 0;
             this.chbHienThiPhongBan.Text = "Phòng ban";
             this.chbHienThiPhongBan.UseVisualStyleBackColor = true;
@@ -808,7 +821,7 @@
             this.chbHienThiChucVu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiChucVu.Location = new System.Drawing.Point(417, 33);
             this.chbHienThiChucVu.Name = "chbHienThiChucVu";
-            this.chbHienThiChucVu.Size = new System.Drawing.Size(83, 21);
+            this.chbHienThiChucVu.Size = new System.Drawing.Size(103, 26);
             this.chbHienThiChucVu.TabIndex = 0;
             this.chbHienThiChucVu.Text = "Chức vụ";
             this.chbHienThiChucVu.UseVisualStyleBackColor = true;
@@ -821,7 +834,7 @@
             this.chbHienThiEmail.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiEmail.Location = new System.Drawing.Point(417, 6);
             this.chbHienThiEmail.Name = "chbHienThiEmail";
-            this.chbHienThiEmail.Size = new System.Drawing.Size(64, 21);
+            this.chbHienThiEmail.Size = new System.Drawing.Size(79, 26);
             this.chbHienThiEmail.TabIndex = 0;
             this.chbHienThiEmail.Text = "Email";
             this.chbHienThiEmail.UseVisualStyleBackColor = true;
@@ -834,7 +847,7 @@
             this.chbHienThiGioiTinh.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiGioiTinh.Location = new System.Drawing.Point(221, 6);
             this.chbHienThiGioiTinh.Name = "chbHienThiGioiTinh";
-            this.chbHienThiGioiTinh.Size = new System.Drawing.Size(81, 21);
+            this.chbHienThiGioiTinh.Size = new System.Drawing.Size(103, 26);
             this.chbHienThiGioiTinh.TabIndex = 0;
             this.chbHienThiGioiTinh.Text = "Giới tính";
             this.chbHienThiGioiTinh.UseVisualStyleBackColor = true;
@@ -847,7 +860,7 @@
             this.chbHienThiNgaySinh.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbHienThiNgaySinh.Location = new System.Drawing.Point(6, 6);
             this.chbHienThiNgaySinh.Name = "chbHienThiNgaySinh";
-            this.chbHienThiNgaySinh.Size = new System.Drawing.Size(91, 21);
+            this.chbHienThiNgaySinh.Size = new System.Drawing.Size(114, 26);
             this.chbHienThiNgaySinh.TabIndex = 0;
             this.chbHienThiNgaySinh.Text = "Ngày sinh";
             this.chbHienThiNgaySinh.UseVisualStyleBackColor = true;
@@ -855,7 +868,7 @@
             // 
             // frmQuanLyDanhSachNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 590);
             this.Controls.Add(this.tabControl1);

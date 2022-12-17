@@ -65,7 +65,7 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void btoLuu_Click(object sender, EventArgs e)
         {
-            string strCommand = "INSERT NhanVien(Ho,Ten,NgaySinh,GioiTinh,MaQueQuan,MaDanToc,MaTonGiao,DiaChi,MaTinhThanh,DienThoai,Email,MaPhongBan,MaChucVu) VALUES(@ho,@ten,@ngaySinh,@gioiTinh,@maQueQuan,@maDanToc,@maTonGiao,@diaChi,@maTinhThanh,@dienThoai,@email,@maPhongBan,@maChucVu)";
+            string strCommand = "INSERT NhanVien(Ho,Ten,NgaySinh,GioiTinh,MaQueQuan,MaDanToc,MaTonGiao,DiaChi,MaTinhThanh,DienThoai,Email,MaPhongBan,MaChucVu,NguoiSua,ThoiDiemSua) VALUES(@ho,@ten,@ngaySinh,@gioiTinh,@maQueQuan,@maDanToc,@maTonGiao,@diaChi,@maTinhThanh,@dienThoai,@email,@maPhongBan,@maChucVu,@nguoiSua, default)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@ho", tboHo.Text);
             parameters.Add("@ten", tboTen.Text);
@@ -83,6 +83,7 @@ namespace BTL_QuanyNhanSu.QuanLy
             parameters.Add("@Email", tboEmail.Text);
             parameters.Add("@maChucVu", cbbChucVu.SelectedValue);
             parameters.Add("@maPhongBan", cbbPhongBan.SelectedValue);
+            parameters.Add("@nguoiSua", Program.TenDangNhap);
             Database.Execute(strCommand, parameters);
             int maNhanVien = (int)Database.Query("SELECT MAX(MaNhanVien) FROM NhanVien", new Dictionary<string, object>()).Rows[0][0];
             for (int i = 0; i < ngoaiNguNhanViens.Rows.Count; ++i)
@@ -94,6 +95,7 @@ namespace BTL_QuanyNhanSu.QuanLy
                 parameters.Add("@ghiChu", ngoaiNguNhanViens.Rows[i]["GhiChu"]);
                 Database.Execute(strCommand, parameters);
             }
+            sttStrip_label.Text = "Thông báo: Thêm nhân viên thành công!";
         }
 
         private void btoThemNgoaiNgu_Click(object sender, EventArgs e)
@@ -129,6 +131,11 @@ namespace BTL_QuanyNhanSu.QuanLy
         }
 
         private void frmThemNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbpNgoaiNgu_Click(object sender, EventArgs e)
         {
 
         }
