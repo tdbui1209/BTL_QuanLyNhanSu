@@ -173,7 +173,23 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void frmQuanLyDanhSachPhongBan_Load(object sender, EventArgs e)
         {
+            if (chbMaPhongBan.Checked)
+            {
+                tboMaPhongBan.Enabled = true;
+            }
+            else
+            {
+                tboMaPhongBan.Enabled = false;
+            }
 
+            if (chbTenPhongBan.Checked)
+            {
+                tboTenPhongBan.Enabled = true;
+            }
+            else
+            {
+                tboTenPhongBan.Enabled = false;
+            }
         }
 
         private void btoChon_Click(object sender, EventArgs e)
@@ -185,6 +201,16 @@ namespace BTL_QuanyNhanSu.QuanLy
         private void grbThongTin_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void chbMaPhongBan_CheckedChanged(object sender, EventArgs e)
+        {
+            tboMaPhongBan.Enabled = (chbMaPhongBan.CheckState == CheckState.Checked);
+        }
+
+        private void chbTenPhongBan_CheckedChanged(object sender, EventArgs e)
+        {
+            tboTenPhongBan.Enabled = (chbMaPhongBan.CheckState == CheckState.Checked);
         }
     }
 }

@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(170, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(598, 40);
+            this.label1.Size = new System.Drawing.Size(484, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ DANH SÁCH PHÒNG BAN";
             // 
@@ -84,46 +84,44 @@
             // 
             this.tboTenPhongBan.Location = new System.Drawing.Point(149, 67);
             this.tboTenPhongBan.Name = "tboTenPhongBan";
-            this.tboTenPhongBan.Size = new System.Drawing.Size(368, 29);
+            this.tboTenPhongBan.Size = new System.Drawing.Size(368, 25);
             this.tboTenPhongBan.TabIndex = 1;
             // 
             // tboMaPhongBan
             // 
             this.tboMaPhongBan.Location = new System.Drawing.Point(149, 32);
             this.tboMaPhongBan.Name = "tboMaPhongBan";
-            this.tboMaPhongBan.Size = new System.Drawing.Size(149, 29);
+            this.tboMaPhongBan.Size = new System.Drawing.Size(149, 25);
             this.tboMaPhongBan.TabIndex = 1;
             // 
             // chbTenPhongBan
             // 
             this.chbTenPhongBan.AutoSize = true;
-            this.chbTenPhongBan.Checked = true;
-            this.chbTenPhongBan.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbTenPhongBan.Location = new System.Drawing.Point(6, 71);
             this.chbTenPhongBan.Name = "chbTenPhongBan";
-            this.chbTenPhongBan.Size = new System.Drawing.Size(159, 26);
+            this.chbTenPhongBan.Size = new System.Drawing.Size(124, 21);
             this.chbTenPhongBan.TabIndex = 0;
             this.chbTenPhongBan.Text = "Tên phòng ban";
             this.chbTenPhongBan.UseVisualStyleBackColor = true;
+            this.chbTenPhongBan.CheckedChanged += new System.EventHandler(this.chbTenPhongBan_CheckedChanged);
             // 
             // chbMaPhongBan
             // 
             this.chbMaPhongBan.AutoSize = true;
-            this.chbMaPhongBan.Checked = true;
-            this.chbMaPhongBan.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbMaPhongBan.Location = new System.Drawing.Point(6, 34);
             this.chbMaPhongBan.Name = "chbMaPhongBan";
-            this.chbMaPhongBan.Size = new System.Drawing.Size(151, 26);
+            this.chbMaPhongBan.Size = new System.Drawing.Size(118, 21);
             this.chbMaPhongBan.TabIndex = 0;
             this.chbMaPhongBan.Text = "Mã phòng ban";
             this.chbMaPhongBan.UseVisualStyleBackColor = true;
+            this.chbMaPhongBan.CheckedChanged += new System.EventHandler(this.chbMaPhongBan_CheckedChanged);
             // 
             // chbTimKiem
             // 
             this.chbTimKiem.AutoSize = true;
             this.chbTimKiem.Location = new System.Drawing.Point(18, 176);
             this.chbTimKiem.Name = "chbTimKiem";
-            this.chbTimKiem.Size = new System.Drawing.Size(111, 26);
+            this.chbTimKiem.Size = new System.Drawing.Size(87, 21);
             this.chbTimKiem.TabIndex = 0;
             this.chbTimKiem.Text = "Tìm kiếm";
             this.chbTimKiem.UseVisualStyleBackColor = true;
@@ -224,16 +222,16 @@
             this.stsMessage.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.stsMessage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.stsMessage.Location = new System.Drawing.Point(0, 519);
+            this.stsMessage.Location = new System.Drawing.Point(0, 523);
             this.stsMessage.Name = "stsMessage";
-            this.stsMessage.Size = new System.Drawing.Size(938, 26);
+            this.stsMessage.Size = new System.Drawing.Size(938, 22);
             this.stsMessage.TabIndex = 4;
             this.stsMessage.Text = "statusStrip1";
             // 
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(84, 20);
+            this.lblStatus.Size = new System.Drawing.Size(67, 17);
             this.lblStatus.Text = "Thông báo:";
             // 
             // btoChon
@@ -250,7 +248,7 @@
             // 
             // frmQuanLyDanhSachPhongBan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 545);
             this.Controls.Add(this.stsMessage);

@@ -42,7 +42,7 @@ namespace BTL_QuanyNhanSu.QuanLy
         {
             string strQuery = "SELECT * FROM dbo.ufTimKiemNhanVien(@maNhanVien,@ho,@ten,@gioiTinh,@ngaySinhTu,@ngaySinhDen,@dienThoai,@tenQueQuan,@tenDanToc,@tenTonGiao,@diaChi,@tenTinhThanh,@tenChucVu,@tenPhongBan,@email)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            if (chbMaNhanVien.Checked)
+            if (chbMaNhanVien.Checked )
                 parameters.Add("@maNhanVien", int.Parse(tboMaNhanVien.Text));
             else
                 parameters.Add("@maNhanVien", 0);
@@ -342,6 +342,24 @@ namespace BTL_QuanyNhanSu.QuanLy
             //Truyền mã nhân viên lấy được vào Form sửa nhân viên
             frmSuaNhanVien form = new frmSuaNhanVien(maNhanVien);
             form.ShowDialog();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn xóa chứ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string strCommand = "EXEC spXoaNhanVien @maNhanVien";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@maNhanVien", dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
+                MessageBox.Show(dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
+                Database.Execute(strCommand, parameters);
+                loadDgvNhanVien();
+            }
         }
     }
 }

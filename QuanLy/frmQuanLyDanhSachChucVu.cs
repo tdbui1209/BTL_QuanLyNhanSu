@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace BTL_QuanyNhanSu.QuanLy
 {
@@ -161,7 +162,34 @@ namespace BTL_QuanyNhanSu.QuanLy
         }
         private void frmQuanLyDanhSachChucVu_Load(object sender, EventArgs e)
         {
+            if (chbMaChucVu.Checked)
+            {
+                tboMaChucVu.Enabled = true;
+            }
+            else
+            {
+                tboMaChucVu.Enabled = false;
+            }
 
+            if (chbTenChucVu.Checked)
+            {
+                tboTenChucVu.Enabled = true;
+            }
+            else
+            {
+                tboTenChucVu.Enabled = false;
+            }
+
+        }
+
+        private void chbMaChucVu_CheckedChanged(object sender, EventArgs e)
+        {
+            tboMaChucVu.Enabled = (chbMaChucVu.CheckState == CheckState.Checked);
+        }
+
+        private void chbTenChucVu_CheckedChanged(object sender, EventArgs e)
+        {
+            tboTenChucVu.Enabled = (chbTenChucVu.CheckState == CheckState.Checked);
         }
     }
 }

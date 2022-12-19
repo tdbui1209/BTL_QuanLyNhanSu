@@ -61,15 +61,12 @@
   <data name="btoLuu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAALFJREFUSEvtlEsKAjEQRHMMPxdSvI+6dOk5dS7hSqtgAk2oGnuS7Tx4m/DohgRS
+        DAAACwwBP0AiyAAAALFJREFUSEvtlEsKAjEQRHMMPxdSvI+6dOk5dS7hSqtgAk2oGnuS7Tx4m/DohgRS
         NtZygRP8rvQBU7yhGpAxtaTGWeIC+oSL1DBLHF5dXFKjLHFw1PI3aIhDoxYV92hRcY8WFfdoUXGPFhXT
         D7zCw+xtPlMttaiYcmALz1RLLSqme9iyg6qlFhVTXkvLEaqWWlRM1RXdoWqpRcWUD8olw4888l1XX9By
         hiNLOPwEN7KU8gOSivTDRi/mRgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="MaNgoaiNgu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="colTenNgoaiNgu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -79,7 +76,7 @@
   <data name="btoXoaNgoaiNgu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAHBJREFUSEvtzrENgDAQQ9FMQsE0sH9NAQwCpkVf1jmioMiXXhlf2uiLJtnketll
+        DAAACwwBP0AiyAAAAHBJREFUSEvtzrENgDAQQ9FMQsE0sH9NAQwCpkVf1jmioMiXXhlf2uiLJtnketll
         lq7eY1Xl6HHFv6IfOnE04sTRiBNHI04cjThxNOLE0YgTRyNOHI04cTTixNGIE0cjTtwpNEQOiVulcuQZ
         X2TUU2s3ysLHWIVU9IAAAAAASUVORK5CYII=
 </value>
@@ -87,7 +84,7 @@
   <data name="btoThemNgoaiNgu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAHlJREFUSEtjGEyACYhjoJgRJEBtADL4PxRHgwSoDRqAGGYBiE11MGoBQTDCLYBl
+        DAAACwwBP0AiyAAAAHlJREFUSEtjGEyACYhjoJgRJEBtADL4PxRHgwSoDRqAGGYBiE11MGoBQTDCLYBl
         onI8eDcQwywAsbGpgWGMzIiciaiFUTIjzS0AeQck0IEHHwFimGYQG5saGI4CYpLLq8GdiogBoxYQBEPf
         AppXmbDMSFYmohFgYAAABnxwZdmsC9gAAAAASUVORK5CYII=
 </value>
