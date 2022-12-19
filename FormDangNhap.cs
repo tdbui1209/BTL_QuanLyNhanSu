@@ -34,6 +34,10 @@ namespace BTL_QuanyNhanSu
                 Database.Execute(strCommand, parameters);
                 authentication = true;
                 Program.TenDangNhap = textBox_TenDangNhap.Text;
+                strCommand = "EXEC spLuuNhatKyDangNhap @tenDangNhap";
+                parameters = new Dictionary<string, object>();
+                parameters.Add("@tenDangNhap", textBox_TenDangNhap.Text);
+                Database.Execute(strCommand, parameters);
                 this.Close();
             }
             catch (Exception ex)

@@ -91,6 +91,7 @@ namespace BTL_QuanyNhanSu.HeThong
                 treeView_PhanQuyen.Nodes[0].Nodes.Add(quyenTaiKhoan.Rows[i]["TenChucNang"].ToString());
             }
             TenDangNhap = tenTaiKhoan;
+            treeView_PhanQuyen.Nodes[0].Expand();
         }
 
         private void button_KhoaTaiKhoan_Click(object sender, EventArgs e)
@@ -115,6 +116,11 @@ namespace BTL_QuanyNhanSu.HeThong
         {
             FormSuaQuyenTaiKhoan form = new FormSuaQuyenTaiKhoan();
             form.ShowDialog();
+        }
+
+        private void FormQuanLyTaiKhoan_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

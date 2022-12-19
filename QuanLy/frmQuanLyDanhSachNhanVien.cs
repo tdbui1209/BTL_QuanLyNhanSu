@@ -267,14 +267,14 @@ namespace BTL_QuanyNhanSu.QuanLy
                 trvTrinhDo.Nodes[0].Nodes.Add(ngoaiNgus.Rows[i]["TenNgoaiNgu"].ToString());
             trvTrinhDo.Nodes[0].Expand();
             //Dựa vào mã nhân viên lấy được sẽ lấy ra tất cả các chuyên môn ứng với nhân viên đó
-            strQuery = "SELECT TenChuyenMon"
-                + " FROM ChuyenMonNhanVien INNER JOIN ChuyenMon ON ChuyenMonNhanVien.MaChuyenMon=ChuyenMon.MaChuyenMon"
-                + " WHERE MaNhanVien=@maNhanVien";
-            DataTable chuyenMons = BTL_QuanyNhanSu.Database.Query(strQuery, parameters);
-            trvTrinhDo.Nodes.Add("Trình độ chuyên môn");
-            for (int i = 0; i < chuyenMons.Rows.Count; i++)
-                trvTrinhDo.Nodes[1].Nodes.Add(chuyenMons.Rows[i]["TenChuyenMon"].ToString());
-            trvTrinhDo.Nodes[1].Expand();
+            //strQuery = "SELECT TenChuyenMon"
+            //    + " FROM ChuyenMonNhanVien INNER JOIN ChuyenMon ON ChuyenMonNhanVien.MaChuyenMon=ChuyenMon.MaChuyenMon"
+            //    + " WHERE MaNhanVien=@maNhanVien";
+            //DataTable chuyenMons = BTL_QuanyNhanSu.Database.Query(strQuery, parameters);
+            //trvTrinhDo.Nodes.Add("Trình độ chuyên môn");
+            //for (int i = 0; i < chuyenMons.Rows.Count; i++)
+            //    trvTrinhDo.Nodes[1].Nodes.Add(chuyenMons.Rows[i]["TenChuyenMon"].ToString());
+            //trvTrinhDo.Nodes[1].Expand();
         }
 
         private void chbNam_CheckedChanged(object sender, EventArgs e)

@@ -49,12 +49,13 @@
             this.NguoiSua,
             this.ThoiDiem,
             this.NoiDung});
-            this.dgv_NhatKy.Location = new System.Drawing.Point(12, 153);
+            this.dgv_NhatKy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_NhatKy.Location = new System.Drawing.Point(0, 0);
             this.dgv_NhatKy.Name = "dgv_NhatKy";
             this.dgv_NhatKy.RowHeadersWidth = 51;
             this.dgv_NhatKy.RowTemplate.Height = 29;
             this.dgv_NhatKy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_NhatKy.Size = new System.Drawing.Size(913, 346);
+            this.dgv_NhatKy.Size = new System.Drawing.Size(937, 511);
             this.dgv_NhatKy.TabIndex = 0;
             // 
             // ID

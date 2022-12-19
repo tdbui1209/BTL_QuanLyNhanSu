@@ -33,13 +33,13 @@
             this.textBox_TenDangNhap = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_TaiKhoan = new System.Windows.Forms.DataGridView();
+            this.TenTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_TimKiem = new System.Windows.Forms.Button();
             this.button_ThayDoiQuyen = new System.Windows.Forms.Button();
             this.button_KhoaTaiKhoan = new System.Windows.Forms.Button();
             this.button_MoTaiKhoan = new System.Windows.Forms.Button();
             this.treeView_PhanQuyen = new System.Windows.Forms.TreeView();
-            this.TenTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).BeginInit();
             this.SuspendLayout();
@@ -103,6 +103,22 @@
             this.dgv_TaiKhoan.TabIndex = 1;
             this.dgv_TaiKhoan.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_RowEnter);
             // 
+            // TenTaiKhoan
+            // 
+            this.TenTaiKhoan.DataPropertyName = "TenDangNhap";
+            this.TenTaiKhoan.HeaderText = "Tên đăng nhập";
+            this.TenTaiKhoan.MinimumWidth = 6;
+            this.TenTaiKhoan.Name = "TenTaiKhoan";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.MinimumWidth = 6;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Width = 104;
+            // 
             // button_TimKiem
             // 
             this.button_TimKiem.Location = new System.Drawing.Point(12, 95);
@@ -150,22 +166,6 @@
             this.treeView_PhanQuyen.Size = new System.Drawing.Size(300, 347);
             this.treeView_PhanQuyen.TabIndex = 6;
             // 
-            // TenTaiKhoan
-            // 
-            this.TenTaiKhoan.DataPropertyName = "TenDangNhap";
-            this.TenTaiKhoan.HeaderText = "Tên đăng nhập";
-            this.TenTaiKhoan.MinimumWidth = 6;
-            this.TenTaiKhoan.Name = "TenTaiKhoan";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.MinimumWidth = 6;
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.Width = 104;
-            // 
             // FormQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -182,6 +182,7 @@
             this.Name = "FormQuanLyTaiKhoan";
             this.Text = "Quản lý tài khoản";
             this.Load += new System.EventHandler(this.FormQuanLyTaiKhoan_Load);
+            this.Enter += new System.EventHandler(this.FormQuanLyTaiKhoan_Enter);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).EndInit();

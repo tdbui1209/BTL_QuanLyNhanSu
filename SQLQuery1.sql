@@ -209,7 +209,7 @@ as begin
 		values (@tenDangNhap, GETDATE(), N'Mở tài khoản: ' + @tenDangNhapKhoa)
 end
 
-create procedure spThemPhongBan @maPhongBan varchar(3), @tenPhongBan nvarchar(30)
+create procedure spThemPhongBan @maPhongBan varchar(3), @tenPhongBan nvarchar(30), @tenDangNhap varchar(30)
 as begin
 	declare @dem int
 	set @dem = (select count(*) from PhongBan where @maPhongBan=MaPhongBan)
@@ -220,7 +220,7 @@ as begin
 		if @dem > 0
 			throw 50001, N'Trùng tên phòng ban', 1
 		else
-			insert into PhongBan values (@maPhongBan, @tenPhongBan)
+			insert into PhongBan values (@maPhongBan, @tenPhongBan, @tenDangNhap, default)
 	end
 end
 
@@ -232,7 +232,7 @@ as begin
 		delete from PhongBan where MaPhongBan=@maPhongBan
 end
 
-create procedure spThemChucVu @maChucVu varchar(3), @tenChucVu nvarchar(30)
+create procedure spThemChucVu @maChucVu varchar(3), @tenChucVu nvarchar(30), @tenDangNhap varchar(30)
 as begin
 	declare @dem int
 	set @dem = (select count(*) from ChucVu where MaChucVu=@maChucVu)
@@ -243,7 +243,7 @@ as begin
 		if @dem > 0
 			throw 50001, N'Trùng tên chức vụ', 1
 		else
-			insert into ChucVu values (@maChucVu, @tenChucVu)
+			insert into ChucVu values (@maChucVu, @tenChucVu, @tenDangNhap, default)
 end
 
 create procedure spXoaChucVu @maChucVu varchar(3)
@@ -301,4 +301,98 @@ as begin
 	set @Ten = (select Ten from inserted)
 	insert NhatKy(TenDangNhap, ThoiDiem, NoiDung)
 	values (@tenDangNhap, getdate(), N'Sửa nhân viên: ' + @Ho + ' ' + @Ten)
+end
+
+alter table PhongBan
+add NguoiSua varchar(30) not null references NguoiDung(TenDangNhap) default 'admin'
+alter table PhongBan
+add ThoiDiemSua datetime not null default(getdate())
+
+create trigger tgThemPhongBan
+on PhongBan
+for insert
+as begin
+	declare @tenDangNhap varchar(30)
+	declare @phongBanMoi nvarchar(30)
+	set @tenDangNhap = (select NguoiSua from inserted)
+	set @phongBanMoi = (select TenPhongBan from inserted)
+	insert NhatKy(TenDangNhap, ThoiDiem, NoiDung)
+	values (@tenDangNhap, getdate(), N'Thêm phòng ban mới: ' + @phongBanMoi)
+end
+
+alter table ChucVu
+add NguoiSua varchar(30) not null references NguoiDung(TenDangNhap) default 'admin'
+alter table ChucVu
+add ThoiDiemSua datetime not null default(getdate())
+
+create trigger tgThemChucVu
+on ChucVu
+for insert
+as begin
+	declare @tenDangNhap varchar(30)
+	declare @chucVuMoi nvarchar(30)
+	set @tenDangNhap = (select NguoiSua from inserted)
+	set @chucVuMoi = (select TenChucVu from inserted)
+	insert NhatKy(TenDangNhap, ThoiDiem, NoiDung)
+	values (@tenDangNhap, getdate(), N'Thêm chức vụ mới: ' + @chucVuMoi)
+end
+
+create procedure spXoaQuyen @tenDangNhap varchar(30), @chucNang varchar(30)
+as begin
+	declare @maChucNang int
+	set @maChucNang = 
+		(select PhanQuyen.MaChucNang from ChucNang inner join PhanQuyen on ChucNang.MaChucNang=PhanQuyen.MaChucNang
+		where TenDangNhap=@tenDangNhap and TenChucNang=@chucNang)
+	delete PhanQuyen where TenDangNhap=@tenDangNhap and MaChucNang=@maChucNang
+end
+
+create procedure spThemQuyen @tenDangNhap varchar(30), @chucNang varchar(30), @nguoiSua varchar(30)
+as begin
+	declare @maChucNang int
+	set @maChucNang = 
+		(select MaChucNang from ChucNang where TenChucNang=@chucNang)
+	insert into PhanQuyen values(@tenDangNhap, @maChucNang, getdate(), @nguoiSua)
+end
+
+alter table PhanQuyen
+add NguoiSua varchar(30) not null references NguoiDung(TenDangNhap) default 'admin'
+alter table PhanQuyen
+add ThoiDiemSua datetime not null default(getdate())
+
+alter trigger tgThemQuyen
+on PhanQuyen
+for insert
+as begin
+	declare @tenDangNhap varchar(30)
+	declare @tenNguoiDung varchar(30)
+	declare @tenChucNang varchar(50)
+	set @tenDangNhap = (select NguoiSua from inserted)
+	set @tenNguoiDung = (select TenDangNhap from inserted)
+	set @tenChucNang = (select TenChucNang from inserted inner join ChucNang on inserted.MaChucNang = ChucNang.MaChucNang)
+	insert NhatKy(TenDangNhap, ThoiDiem, NoiDung)
+	values (@tenDangNhap, getdate(), N'Thêm chức năng ' + @tenChucNang + N' cho tài khoản ' + @tenNguoiDung)
+end
+
+alter trigger tgXoaQuyen
+on PhanQuyen
+for delete
+as begin
+	declare @tenDangNhap varchar(30)
+	declare @tenNguoiDung varchar(30)
+	declare @tenChucNang varchar(50)
+	set @tenDangNhap = (select NguoiSua from deleted)
+	set @tenNguoiDung = (select TenDangNhap from deleted)
+	set @tenChucNang = (select TenChucNang from deleted inner join ChucNang on deleted.MaChucNang = ChucNang.MaChucNang)
+	insert NhatKy(TenDangNhap, ThoiDiem, NoiDung)
+	values (@tenDangNhap, getdate(), N'Xóa chức năng ' + @tenChucNang + N' của tài khoản ' + @tenNguoiDung)
+end
+
+create procedure spLuuNhatKyDangNhap @tenDangNhap varchar(30)
+as begin
+	insert into NhatKy values (@tenDangNhap, getdate(), N'Đăng nhập')
+end
+
+create procedure spLuuNhatKyDangXuat @tenDangNhap varchar(30)
+as begin
+	insert into NhatKy values (@tenDangNhap, getdate(), N'Đăng xuất')
 end

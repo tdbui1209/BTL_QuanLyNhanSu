@@ -23,6 +23,7 @@ namespace BTL_QuanyNhanSu.HeThong
             Dictionary<string, object> parameteres = new Dictionary<string, object>();
             // parameteres.Add("@nguoiSua", )
             dgv_NhatKy.DataSource = Database.Query(strQuery, parameteres);
+            dgv_NhatKy.Sort(this.dgv_NhatKy.Columns["ID"], ListSortDirection.Descending);
         }
     }
 }

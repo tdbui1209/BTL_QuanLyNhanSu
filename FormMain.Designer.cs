@@ -36,10 +36,14 @@
             this.mni_QuanLy = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_QuanLyNhanSu = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_QuanLyPhongBan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mni_QuanLyChucVu = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_NguoiDung = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
-            this.mni_QuanLyChucVu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mni_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.label_XinChao = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -100,21 +104,29 @@
             // mni_QuanLyNhanSu
             // 
             this.mni_QuanLyNhanSu.Name = "mni_QuanLyNhanSu";
-            this.mni_QuanLyNhanSu.Size = new System.Drawing.Size(224, 26);
+            this.mni_QuanLyNhanSu.Size = new System.Drawing.Size(218, 26);
             this.mni_QuanLyNhanSu.Text = "Quản lý nhân sự";
             this.mni_QuanLyNhanSu.Click += new System.EventHandler(this.mni_QuanLyNhanSu_Click);
             // 
             // mni_QuanLyPhongBan
             // 
             this.mni_QuanLyPhongBan.Name = "mni_QuanLyPhongBan";
-            this.mni_QuanLyPhongBan.Size = new System.Drawing.Size(224, 26);
+            this.mni_QuanLyPhongBan.Size = new System.Drawing.Size(218, 26);
             this.mni_QuanLyPhongBan.Text = "Quản lý phòng ban";
             this.mni_QuanLyPhongBan.Click += new System.EventHandler(this.mni_QuanLyPhongBan_Click);
+            // 
+            // mni_QuanLyChucVu
+            // 
+            this.mni_QuanLyChucVu.Name = "mni_QuanLyChucVu";
+            this.mni_QuanLyChucVu.Size = new System.Drawing.Size(218, 26);
+            this.mni_QuanLyChucVu.Text = "Quản lý chức vụ";
+            this.mni_QuanLyChucVu.Click += new System.EventHandler(this.mni_QuanLyChucVu_Click);
             // 
             // mni_NguoiDung
             // 
             this.mni_NguoiDung.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mni_DoiMatKhau});
+            this.mni_DoiMatKhau,
+            this.mni_DangXuat});
             this.mni_NguoiDung.Name = "mni_NguoiDung";
             this.mni_NguoiDung.Size = new System.Drawing.Size(103, 24);
             this.mni_NguoiDung.Text = "Người dùng";
@@ -126,26 +138,49 @@
             this.mni_DoiMatKhau.Text = "Đổi mật khẩu";
             this.mni_DoiMatKhau.Click += new System.EventHandler(this.mni_DoiMatKhau_Click);
             // 
-            // mni_QuanLyChucVu
+            // mni_DangXuat
             // 
-            this.mni_QuanLyChucVu.Name = "mni_QuanLyChucVu";
-            this.mni_QuanLyChucVu.Size = new System.Drawing.Size(224, 26);
-            this.mni_QuanLyChucVu.Text = "Quản lý chức vụ";
-            this.mni_QuanLyChucVu.Click += new System.EventHandler(this.mni_QuanLyChucVu_Click);
+            this.mni_DangXuat.Name = "mni_DangXuat";
+            this.mni_DangXuat.Size = new System.Drawing.Size(181, 26);
+            this.mni_DangXuat.Text = "Đăng xuất";
+            this.mni_DangXuat.Click += new System.EventHandler(this.mni_DangXuat_Click);
+            // 
+            // label_XinChao
+            // 
+            this.label_XinChao.AutoSize = true;
+            this.label_XinChao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_XinChao.Location = new System.Drawing.Point(12, 15);
+            this.label_XinChao.Name = "label_XinChao";
+            this.label_XinChao.Size = new System.Drawing.Size(85, 28);
+            this.label_XinChao.TabIndex = 3;
+            this.label_XinChao.Text = "Lời chào";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label_XinChao);
+            this.panel1.Location = new System.Drawing.Point(0, 33);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 418);
+            this.panel1.TabIndex = 5;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "Quản lý nhân sự";
+            this.Activated += new System.EventHandler(this.FormMain_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +199,8 @@
         private ToolStripMenuItem mni_QuanLyPhongBan;
         private ToolStripMenuItem mni_NhatKy;
         private ToolStripMenuItem mni_QuanLyChucVu;
+        private ToolStripMenuItem mni_DangXuat;
+        private Label label_XinChao;
+        private Panel panel1;
     }
 }
