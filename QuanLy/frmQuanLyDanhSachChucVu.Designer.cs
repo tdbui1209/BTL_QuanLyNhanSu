@@ -195,7 +195,7 @@
             this.dgvChucVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChucVu.Size = new System.Drawing.Size(914, 296);
             this.dgvChucVu.TabIndex = 3;
-            this.dgvChucVu.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_RowEnter);
+            this.dgvChucVu.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChucVu_RowEnter);
             // 
             // colMaChucVu
             // 

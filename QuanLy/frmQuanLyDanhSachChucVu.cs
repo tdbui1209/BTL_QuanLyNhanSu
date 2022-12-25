@@ -97,20 +97,6 @@ namespace BTL_QuanyNhanSu.QuanLy
             }
         }
 
-        private void dgvPhongBan_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1)
-            {
-                tboMaChucVu.Text = dgvChucVu.Rows[e.RowIndex].Cells["colMaChucVu"].Value.ToString();
-                tboTenChucVu.Text = dgvChucVu.Rows[e.RowIndex].Cells["colTenChucVu"].Value.ToString();
-            }
-            else
-            {
-                tboMaChucVu.Text = "";
-                tboTenChucVu.Text = "";
-            }
-        }
-
         private void btoSua_Click(object sender, EventArgs e)
         {
             //Kiểm tra lỗi nhập form (để trống, sai định dạng)
@@ -190,6 +176,20 @@ namespace BTL_QuanyNhanSu.QuanLy
         private void chbTenChucVu_CheckedChanged(object sender, EventArgs e)
         {
             tboTenChucVu.Enabled = (chbTenChucVu.CheckState == CheckState.Checked);
+        }
+
+        private void dgvChucVu_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                tboMaChucVu.Text = dgvChucVu.Rows[e.RowIndex].Cells["ColMaChucVu"].Value.ToString();
+                tboTenChucVu.Text = dgvChucVu.Rows[e.RowIndex].Cells["ColTenChucVu"].Value.ToString();
+            }
+            else
+            {
+                tboMaChucVu.Text = "";
+                tboTenChucVu.Text = "";
+            }
         }
     }
 }

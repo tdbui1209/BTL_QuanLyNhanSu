@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace BTL_QuanyNhanSu.QuanLy
 {
@@ -104,7 +105,9 @@ namespace BTL_QuanyNhanSu.QuanLy
                 parameters.Add("@email", tboEmail.Text);
             else
                 parameters.Add("@email", "");
-            dgvNhanVien.DataSource = Database.Query(strQuery, parameters);
+            DataTable table = Database.Query(strQuery, parameters);
+            dgvNhanVien.DataSource = table;
+            btoSua.Enabled = btoXoa.Enabled = table.Rows.Count > 0;
         }
         public frmQuanLyDanhSachNhanVien()
         {
@@ -116,6 +119,7 @@ namespace BTL_QuanyNhanSu.QuanLy
             loadCbbPhongBan();
             loadCbbChucVu();
             loadDgvNhanVien();
+
         }
 
         private void chbMaNhanVien_CheckedChanged(object sender, EventArgs e)
@@ -251,30 +255,38 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void dgvNhanVien_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            trvTrinhDo.Nodes.Clear();
-            //Lấy ra mã nhân viên ở dòng được chọn
-            int maNhanVien = (int)dgvNhanVien.Rows[e.RowIndex].Cells["colMaNhanVien"].Value;
-            //Dựa vào mã nhân viên lấy được sẽ lấy ra tất cả các ngoại ngữ ứng với nhân viên đó
-            string strQuery = "SELECT TenNgoaiNgu"
-                + " FROM NgoaiNguNhanVien INNER JOIN NgoaiNgu ON NgoaiNguNhanVien.MaNgoaiNgu=NgoaiNgu.MaNgoaiNgu"
-                + " WHERE MaNhanVien=@maNhanVien";
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@maNhanVien", maNhanVien);
-            DataTable ngoaiNgus = Database.Query(strQuery, parameters);
-            //Đem các ngoại ngữ đó đẩy vào tree view
-            trvTrinhDo.Nodes.Add("Trình độ ngoại ngữ");
-            for (int i = 0; i < ngoaiNgus.Rows.Count; i++)
-                trvTrinhDo.Nodes[0].Nodes.Add(ngoaiNgus.Rows[i]["TenNgoaiNgu"].ToString());
-            trvTrinhDo.Nodes[0].Expand();
-            //Dựa vào mã nhân viên lấy được sẽ lấy ra tất cả các chuyên môn ứng với nhân viên đó
-            //strQuery = "SELECT TenChuyenMon"
-            //    + " FROM ChuyenMonNhanVien INNER JOIN ChuyenMon ON ChuyenMonNhanVien.MaChuyenMon=ChuyenMon.MaChuyenMon"
-            //    + " WHERE MaNhanVien=@maNhanVien";
-            //DataTable chuyenMons = BTL_QuanyNhanSu.Database.Query(strQuery, parameters);
-            //trvTrinhDo.Nodes.Add("Trình độ chuyên môn");
-            //for (int i = 0; i < chuyenMons.Rows.Count; i++)
-            //    trvTrinhDo.Nodes[1].Nodes.Add(chuyenMons.Rows[i]["TenChuyenMon"].ToString());
-            //trvTrinhDo.Nodes[1].Expand();
+            if(e.RowIndex > -1)
+            {
+                tboMaNhanVien.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colMaNhanVien"].Value.ToString();
+                tboHo.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colHo"].Value.ToString();
+                tboTen.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colTen"].Value.ToString();
+                dtpNgaySinhTu.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colNgaySinh"].Value.ToString();
+                cbbQueQuan.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colQueQuan"].Value.ToString();
+                tboDiaChi.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colDiaChi"].Value.ToString();
+                cbbChucVu.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colChucVu"].Value.ToString();
+                cbbPhongBan.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colPhongBan"].Value.ToString();
+                tboDienThoai.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colDienThoai"].Value.ToString();
+                cbbTonGiao.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colTonGiao"].Value.ToString();
+                cbbDanToc.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colDanToc"].Value.ToString();
+                cbbTinhThanh.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colTinhThanh"].Value.ToString();
+                tboEmail.Text = dgvNhanVien.Rows[e.RowIndex].Cells["colEmail"].Value.ToString();
+            }
+            else
+            {
+                tboMaNhanVien.Text = "";
+                tboHo.Text = "";
+                tboTen.Text = "";
+                dtpNgaySinhTu.Text = "";
+                cbbQueQuan.Text = "";
+                tboDiaChi.Text = "";
+                cbbChucVu.Text = "";
+                cbbPhongBan.Text = "";
+                tboDienThoai.Text = "";
+                cbbTonGiao.Text = "";
+                cbbDanToc.Text = "";
+                cbbTinhThanh.Text = "";
+                tboEmail.Text = "";
+            }
         }
 
         private void chbNam_CheckedChanged(object sender, EventArgs e)
@@ -337,11 +349,23 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void btoSua_Click(object sender, EventArgs e)
         {
-            //Lấy ra mã nhân viên của dòng đang chọn
-            int maNhanVien = (int)dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value;
-            //Truyền mã nhân viên lấy được vào Form sửa nhân viên
-            frmSuaNhanVien form = new frmSuaNhanVien(maNhanVien);
-            form.ShowDialog();
+            string strQuery = "SELECT * FROM NhanVien WHERE MaNhanVien=@maNhanVien AND Ho=@ho AND Ten=@ten AND NgaySinh=@ngaySinh AND MaChucVu=@maChucVu AND GioiTinh=@gioiTinh";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maNhanVien", dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
+            parameters.Add("@ho", tboHo.Text);
+            parameters.Add("@ten", tboTen.Text);
+            parameters.Add("@ngaySinh", DateTime.Parse(dtpNgaySinhTu.Text));
+            parameters.Add("@maChucVu", cbbChucVu.SelectedValue);
+            if (chbNu.Checked)
+                parameters.Add("@gioiTinh", 0);
+            else
+                parameters.Add("@gioiTinh", 1);
+            DataTable table = Database.Query(strQuery, parameters);
+            //Thực hiện sửa dữ liệu
+            string strCommand = "UPDATE NhanVien SET Ho=@ho,Ten=@ten,NgaySinh=@ngaySinh,MaChucVu=@maChucVu,GioiTinh=@gioiTinh WHERE MaNhanVien=@maNhanVien";
+            Database.Execute(strCommand, parameters);
+            loadDgvNhanVien();
+            toolStripStatusLabel1.Text = "Thông báo: Sửa dữ liệu thành công";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -353,12 +377,20 @@ namespace BTL_QuanyNhanSu.QuanLy
         {
             if (MessageBox.Show("Bạn có chắc muốn xóa chứ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string strCommand = "EXEC spXoaNhanVien @maNhanVien";
-                Dictionary<string, object> parameters = new Dictionary<string, object>();
-                parameters.Add("@maNhanVien", dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
-                MessageBox.Show(dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
-                Database.Execute(strCommand, parameters);
-                loadDgvNhanVien();
+                try
+                {
+                    string strCommand = "EXEC spXoaNhanVien @maNhanVien";
+                    Dictionary<string, object> parameters = new Dictionary<string, object>();
+                    parameters.Add("@maNhanVien", dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
+                    MessageBox.Show(dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
+                    Database.Execute(strCommand, parameters);
+                    loadDgvNhanVien();
+                    toolStripStatusLabel1.Text = "Thông báo: Xóa dữ liệu thành công";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

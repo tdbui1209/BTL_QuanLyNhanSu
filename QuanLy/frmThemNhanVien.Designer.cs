@@ -129,7 +129,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(751, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(748, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 138);
             this.pictureBox1.TabIndex = 14;
@@ -137,6 +137,8 @@
             // 
             // cbbPhongBan
             // 
+            this.cbbPhongBan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbPhongBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbPhongBan.DisplayMember = "TenPhongBan";
             this.cbbPhongBan.FormattingEnabled = true;
             this.cbbPhongBan.Location = new System.Drawing.Point(414, 181);
@@ -148,6 +150,8 @@
             // 
             // cbbChucVu
             // 
+            this.cbbChucVu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbChucVu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbChucVu.DisplayMember = "TenChucVu";
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Location = new System.Drawing.Point(83, 181);
@@ -159,6 +163,8 @@
             // 
             // cbbTinhThanh
             // 
+            this.cbbTinhThanh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbTinhThanh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbTinhThanh.DisplayMember = "TenTinhThanh";
             this.cbbTinhThanh.FormattingEnabled = true;
             this.cbbTinhThanh.Location = new System.Drawing.Point(558, 150);
@@ -170,6 +176,8 @@
             // 
             // cbbTonGiao
             // 
+            this.cbbTonGiao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbTonGiao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbTonGiao.DisplayMember = "TenTonGiao";
             this.cbbTonGiao.FormattingEnabled = true;
             this.cbbTonGiao.Location = new System.Drawing.Point(558, 89);
@@ -181,6 +189,8 @@
             // 
             // cbbDanToc
             // 
+            this.cbbDanToc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbDanToc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbDanToc.DisplayMember = "TenDanToc";
             this.cbbDanToc.FormattingEnabled = true;
             this.cbbDanToc.Location = new System.Drawing.Point(558, 58);
@@ -191,6 +201,8 @@
             // 
             // cbbQueQuan
             // 
+            this.cbbQueQuan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbQueQuan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbQueQuan.DisplayMember = "TenTinhThanh";
             this.cbbQueQuan.FormattingEnabled = true;
             this.cbbQueQuan.Location = new System.Drawing.Point(558, 27);
@@ -504,6 +516,8 @@
             // 
             // cbbNgoaiNgu
             // 
+            this.cbbNgoaiNgu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbNgoaiNgu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbNgoaiNgu.DisplayMember = "TenNgoaiNgu";
             this.cbbNgoaiNgu.FormattingEnabled = true;
             this.cbbNgoaiNgu.Location = new System.Drawing.Point(87, 13);
