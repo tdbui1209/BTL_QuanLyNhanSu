@@ -195,7 +195,7 @@ namespace BTL_QuanyNhanSu.QuanLy
         private void btoThem_Click(object sender, EventArgs e)
         {
             frmThemNhanVien form = new frmThemNhanVien();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void chbHienThiNgaySinh_CheckedChanged(object sender, EventArgs e)
@@ -349,23 +349,11 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void btoSua_Click(object sender, EventArgs e)
         {
-            string strQuery = "SELECT * FROM NhanVien WHERE MaNhanVien=@maNhanVien AND Ho=@ho AND Ten=@ten AND NgaySinh=@ngaySinh AND MaChucVu=@maChucVu AND GioiTinh=@gioiTinh";
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@maNhanVien", dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
-            parameters.Add("@ho", tboHo.Text);
-            parameters.Add("@ten", tboTen.Text);
-            parameters.Add("@ngaySinh", DateTime.Parse(dtpNgaySinhTu.Text));
-            parameters.Add("@maChucVu", cbbChucVu.SelectedValue);
-            if (chbNu.Checked)
-                parameters.Add("@gioiTinh", 0);
-            else
-                parameters.Add("@gioiTinh", 1);
-            DataTable table = Database.Query(strQuery, parameters);
-            //Thực hiện sửa dữ liệu
-            string strCommand = "UPDATE NhanVien SET Ho=@ho,Ten=@ten,NgaySinh=@ngaySinh,MaChucVu=@maChucVu,GioiTinh=@gioiTinh WHERE MaNhanVien=@maNhanVien";
-            Database.Execute(strCommand, parameters);
-            loadDgvNhanVien();
-            toolStripStatusLabel1.Text = "Thông báo: Sửa dữ liệu thành công";
+            //Lấy ra mã nhân viên của dòng đang chọn
+            int maNhanVien = (int)dgvNhanVien.CurrentRow.Cells["colMaNhanVien"].Value;
+            //Truyền mã nhân viên lấy được vào Form sửa nhân viên
+            frmSuaNhanVien form = new frmSuaNhanVien(maNhanVien);
+            form.ShowDialog();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -392,6 +380,11 @@ namespace BTL_QuanyNhanSu.QuanLy
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void cbbTonGiao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

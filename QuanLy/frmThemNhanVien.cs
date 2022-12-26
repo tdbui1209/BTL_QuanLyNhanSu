@@ -112,13 +112,19 @@ namespace BTL_QuanyNhanSu.QuanLy
 
         private void btoThemNgoaiNgu_Click(object sender, EventArgs e)
         {
-            DataRow ngoaiNguNhanVien = ngoaiNguNhanViens.NewRow();
-            ngoaiNguNhanVien["MaNgoaiNgu"] = cbbNgoaiNgu.SelectedValue;
-            ngoaiNguNhanVien["TenNgoaiNgu"] = cbbNgoaiNgu.Text;
-            ngoaiNguNhanVien["GhiChu"] = tboGhiChu.Text;
-            ngoaiNguNhanViens.Rows.Add(ngoaiNguNhanVien);
-            dgvNgoaiNguNhanVien.DataSource = ngoaiNguNhanViens;
-            btoXoaNgoaiNgu.Enabled = dgvNgoaiNguNhanVien.Rows.Count > 0;
+            if (cbbNgoaiNgu.Text!="") {
+                DataRow ngoaiNguNhanVien = ngoaiNguNhanViens.NewRow();
+                ngoaiNguNhanVien["MaNgoaiNgu"] = cbbNgoaiNgu.SelectedValue;
+                ngoaiNguNhanVien["TenNgoaiNgu"] = cbbNgoaiNgu.Text;
+                ngoaiNguNhanVien["GhiChu"] = tboGhiChu.Text;
+                ngoaiNguNhanViens.Rows.Add(ngoaiNguNhanVien);
+                dgvNgoaiNguNhanVien.DataSource = ngoaiNguNhanViens;
+                btoXoaNgoaiNgu.Enabled = dgvNgoaiNguNhanVien.Rows.Count > 0;
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập ngoại ngữ","Thông báo", MessageBoxButtons.OK);
+            }
         }
 
         private void btoXoaNgoaiNgu_Click(object sender, EventArgs e)

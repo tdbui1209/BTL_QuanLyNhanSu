@@ -108,6 +108,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(282, 25);
             this.label1.Name = "label1";
@@ -118,6 +119,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.cbbTinhThanh);
             this.groupBox1.Controls.Add(this.cbbTonGiao);
             this.groupBox1.Controls.Add(this.cbbDanToc);
@@ -177,6 +179,7 @@
             this.cbbTonGiao.Size = new System.Drawing.Size(133, 25);
             this.cbbTonGiao.TabIndex = 14;
             this.cbbTonGiao.ValueMember = "MaTonGiao";
+            this.cbbTonGiao.SelectedIndexChanged += new System.EventHandler(this.cbbTonGiao_SelectedIndexChanged);
             // 
             // cbbDanToc
             // 
@@ -555,6 +558,7 @@
             this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNhanVien,
@@ -571,6 +575,7 @@
             this.colDienThoai,
             this.colChucVu,
             this.colPhongBan});
+            this.dgvNhanVien.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 6);
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
@@ -892,6 +897,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1144, 590);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
