@@ -1,4 +1,6 @@
 ﻿create database BTL_QuanLyNhanSu
+use BTL_QuanLyNhanSu
+go
 
 CREATE TABLE PhongBan
 (
@@ -10,6 +12,8 @@ CREATE TABLE ChucVu
 	MaChucVu VARCHAR(3) PRIMARY KEY,
 	TenChucVu NVARCHAR(30) NOT NULL UNIQUE
 )
+
+
 CREATE TABLE TinhThanh
 (
 	MaTinhThanh VARCHAR(3) PRIMARY KEY,
@@ -73,6 +77,9 @@ create table PhanQuyen
 	MaChucNang int not null references ChucNang(MaChucNang),
 	primary key(TenDangNhap, MaChucNang)
 )
+
+
+SELECT TenNgoaiNgu From
 
 CREATE PROCEDURE spDangNhap @tenDangNhap VARCHAR(30),@matKhau VARCHAR(10)
 AS BEGIN

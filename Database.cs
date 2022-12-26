@@ -13,7 +13,7 @@ namespace BTL_QuanyNhanSu
         public static void Execute(string strCommand, Dictionary<string, object> parameters)
         {
             //Bước 1: Tạo chuỗi kết nối
-            string strConnection = @"server=DESKTOP-67J0UH2\SQLEXPRESS;database=BTL_QuanLyNhanSu;uid=sa;pwd=1;";
+            string strConnection = @"Data Source=(localdb)\MSSqlLocalDb;Initial Catalog=BTL_QuanyNhanSu;Integrated Security=True;";
             //Bước 2: Tạo ra kết nối dựa trên chuỗi và mở kết nối
             SqlConnection connection = new SqlConnection(strConnection);
             connection.Open();
@@ -30,7 +30,7 @@ namespace BTL_QuanyNhanSu
         {
             //Thực hiện câu lệnh truy vấn trên
             //Bước 1: Tạo chuỗi kết nối
-            string strConnection = @"server=DESKTOP-67J0UH2\SQLEXPRESS;database=BTL_QuanLyNhanSu;uid=sa;pwd=1;";
+            string strConnection = @"Data Source=(localdb)\MSSqlLocalDb;Initial Catalog=BTL_QuanyNhanSu;Integrated Security=True;";
             //Bước 2: Tạo ra kết nối dựa trên chuỗi và mở kết nối
             SqlConnection connection = new SqlConnection(strConnection);
             connection.Open();

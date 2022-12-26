@@ -8,6 +8,8 @@ namespace BTL_QuanyNhanSu
 {
     public partial class FormMain : Form
     {
+        
+
         public FormMain()
         {
             InitializeComponent();
@@ -21,7 +23,6 @@ namespace BTL_QuanyNhanSu
             }
             else
             {
-                label_XinChao.Text = "Xin chào, " + Program.TenDangNhap;
                 string strQuery = "SELECT * FROM dbo.ufLayPhanQuyen(@tenDangNhap)";
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
                 parameters.Add("@tenDangNhap", Program.TenDangNhap);
@@ -56,7 +57,14 @@ namespace BTL_QuanyNhanSu
         private void mni_QuanLyNhanSu_Click(object sender, EventArgs e)
         {
             frmQuanLyDanhSachNhanVien form = new frmQuanLyDanhSachNhanVien();
-            form.ShowDialog();
+            for (int i = 0; i < this.MdiChildren.Length; ++i)
+                if (this.MdiChildren[i].Text == form.Text)
+                {
+                    this.MdiChildren[i].Activate();
+                    return;
+                }
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void mni_QuanLyTaiKhoan_Click(object sender, EventArgs e)
@@ -74,7 +82,14 @@ namespace BTL_QuanyNhanSu
         private void mni_QuanLyPhongBan_Click(object sender, EventArgs e)
         {
             frmQuanLyDanhSachPhongBan form = new frmQuanLyDanhSachPhongBan();
-            form.ShowDialog();
+            for (int i = 0; i < this.MdiChildren.Length; ++i)
+                if (this.MdiChildren[i].Text == form.Text)
+                {
+                    this.MdiChildren[i].Activate();
+                    return;
+                }
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void mni_NhatKy_Click(object sender, EventArgs e)
@@ -86,7 +101,14 @@ namespace BTL_QuanyNhanSu
         private void mni_QuanLyChucVu_Click(object sender, EventArgs e)
         {
             frmQuanLyDanhSachChucVu form = new frmQuanLyDanhSachChucVu();
-            form.ShowDialog();
+            for (int i = 0; i < this.MdiChildren.Length; ++i)
+                if (this.MdiChildren[i].Text == form.Text)
+                {
+                    this.MdiChildren[i].Activate();
+                    return;
+                }
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void mni_DangXuat_Click(object sender, EventArgs e)
@@ -128,6 +150,21 @@ namespace BTL_QuanyNhanSu
                 mni_QuanLyNhanSu.Enabled = lstChucNang.Contains("Quan Ly Nhan Su");
                 mni_QuanLyChucVu.Enabled = lstChucNang.Contains("Quan Ly Chuc Vu");
             }
+        }
+
+        private void mni_QuanLy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
